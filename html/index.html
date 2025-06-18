@@ -1,11 +1,781 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Quizz PTable</title>
-    </head>
-    <body>
-        <h1>Olá, bem vindo ao meu app</h1>
-        <h2>Eu sou Gustavo</h2>
-    </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Tabela Periódica</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="input-zone-section">
+            <h1>Quiz de Elementos</h1>
+            <div class="search-area">
+                <input type="text" id="elementInput" placeholder="Tente 'Cu' ou 'Rutherfórdio'">
+                <select id="familyFilterSelect">
+                    <option value="">Todas as Famílias</option>
+                    </select>
+            </div>
+            <p id="message">Digite um elemento para começar o quiz.</p>
+        </div>
+
+        <hr> <div class="periodic-table-section">
+            <h1>Tabela Periódica</h1>
+            <div id="periodic-table-grid">
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 1;" data-symbol="H">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-space" style="grid-column: 2 / span 16; grid-row: 1;"></div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 1;" data-symbol="He">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 2;" data-symbol="Li">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 2;" data-symbol="Be">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-space" style="grid-column: 3 / span 10; grid-row: 2;"></div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 2;" data-symbol="B">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 2;" data-symbol="C">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 2;" data-symbol="N">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 2;" data-symbol="O">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 2;" data-symbol="F">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 2;" data-symbol="Ne">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 3;" data-symbol="Na">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 3;" data-symbol="Mg">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-space" style="grid-column: 3 / span 10; grid-row: 3;"></div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 3;" data-symbol="Al">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 3;" data-symbol="Si">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 3;" data-symbol="P">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 3;" data-symbol="S">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 3;" data-symbol="Cl">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 3;" data-symbol="Ar">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 4;" data-symbol="K">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 4;" data-symbol="Ca">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 3; grid-row: 4;" data-symbol="Sc">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 4;" data-symbol="Ti">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 4;" data-symbol="V">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 4;" data-symbol="Cr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 4;" data-symbol="Mn">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 4;" data-symbol="Fe">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 4;" data-symbol="Co">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 4;" data-symbol="Ni">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 4;" data-symbol="Cu">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 4;" data-symbol="Zn">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 4;" data-symbol="Ga">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 4;" data-symbol="Ge">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 4;" data-symbol="As">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 4;" data-symbol="Se">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 4;" data-symbol="Br">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 4;" data-symbol="Kr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 5;" data-symbol="Rb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 5;" data-symbol="Sr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 3; grid-row: 5;" data-symbol="Y">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 5;" data-symbol="Zr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 5;" data-symbol="Nb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 5;" data-symbol="Mo">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 5;" data-symbol="Tc">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 5;" data-symbol="Ru">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 5;" data-symbol="Rh">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 5;" data-symbol="Pd">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 5;" data-symbol="Ag">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 5;" data-symbol="Cd">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 5;" data-symbol="In">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 5;" data-symbol="Sn">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 5;" data-symbol="Sb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 5;" data-symbol="Te">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 5;" data-symbol="I">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 5;" data-symbol="Xe">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 6;" data-symbol="Cs">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 6;" data-symbol="Ba">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="lanthanide-placeholder" style="grid-column: 3; grid-row: 6;">57-71</div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 6;" data-symbol="Hf">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 6;" data-symbol="Ta">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 6;" data-symbol="W">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 6;" data-symbol="Re">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 6;" data-symbol="Os">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 6;" data-symbol="Ir">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 6;" data-symbol="Pt">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 6;" data-symbol="Au">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 6;" data-symbol="Hg">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 6;" data-symbol="Tl">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 6;" data-symbol="Pb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 6;" data-symbol="Bi">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 6;" data-symbol="Po">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 6;" data-symbol="At">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 6;" data-symbol="Rn">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="empty-element-card" style="grid-column: 1; grid-row: 7;" data-symbol="Fr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 2; grid-row: 7;" data-symbol="Ra">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="actinide-placeholder" style="grid-column: 3; grid-row: 7;">89-103</div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 7;" data-symbol="Rf">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 7;" data-symbol="Db">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 7;" data-symbol="Sg">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 7;" data-symbol="Bh">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 7;" data-symbol="Hs">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 7;" data-symbol="Mt">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 7;" data-symbol="Ds">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 7;" data-symbol="Rg">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 7;" data-symbol="Cn">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 7;" data-symbol="Nh">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 7;" data-symbol="Fl">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 7;" data-symbol="Mc">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 7;" data-symbol="Lv">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 7;" data-symbol="Ts">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 18; grid-row: 7;" data-symbol="Og">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+
+                <div class="series-label" style="grid-row: 8;">Lantanídeos</div>
+                <div class="empty-element-card" style="grid-column: 3; grid-row: 8;" data-symbol="La">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 8;" data-symbol="Ce">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 8;" data-symbol="Pr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 8;" data-symbol="Nd">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 8;" data-symbol="Pm">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 8;" data-symbol="Sm">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 8;" data-symbol="Eu">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 8;" data-symbol="Gd">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 8;" data-symbol="Tb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 8;" data-symbol="Dy">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 8;" data-symbol="Ho">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 8;" data-symbol="Er">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 8;" data-symbol="Tm">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 8;" data-symbol="Yb">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 8;" data-symbol="Lu">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-space" style="grid-column: 18; grid-row: 8;"></div>
+
+                <div class="series-label" style="grid-row: 9;">Actinídeos</div>
+                <div class="empty-element-card" style="grid-column: 3; grid-row: 9;" data-symbol="Ac">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 4; grid-row: 9;" data-symbol="Th">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 5; grid-row: 9;" data-symbol="Pa">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 6; grid-row: 9;" data-symbol="U">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 7; grid-row: 9;" data-symbol="Np">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 8; grid-row: 9;" data-symbol="Pu">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 9; grid-row: 9;" data-symbol="Am">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 10; grid-row: 9;" data-symbol="Cm">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 11; grid-row: 9;" data-symbol="Bk">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 12; grid-row: 9;" data-symbol="Cf">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 13; grid-row: 9;" data-symbol="Es">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 14; grid-row: 9;" data-symbol="Fm">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 15; grid-row: 9;" data-symbol="Md">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 16; grid-row: 9;" data-symbol="No">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-element-card" style="grid-column: 17; grid-row: 9;" data-symbol="Lr">
+                    <div class="symbol-display"></div>
+                    <div class="name-display"></div>
+                </div>
+                <div class="empty-space" style="grid-column: 18; grid-row: 9;"></div>
+            </div>
+        </div>
+
+        <hr> <div class="elements-found-section">
+            <h2>Elementos Encontrados:</h2>
+            <div id="foundElementsList">
+                </div>
+            <button id="saveQuizBtn" class="save-button">Salvar Progresso do Quiz</button>
+        </div>
+    </div>
+
+    <div id="quizStatsPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Estatísticas do Quiz</h2>
+            <div id="statsList">
+                </div>
+            <button id="closeStatsPopupBtn" class="save-button">OK</button>
+        </div>
+    </div>
+
+
+    <script>
+        const elementInput = document.getElementById('elementInput');
+        const familyFilterSelect = document.getElementById('familyFilterSelect');
+        const messageParagraph = document.getElementById('message');
+        const foundElementsList = document.getElementById('foundElementsList');
+        const saveQuizBtn = document.getElementById('saveQuizBtn');
+
+        const quizStatsPopup = document.getElementById('quizStatsPopup');
+        const statsList = document.getElementById('statsList');
+        const closeStatsPopupBtn = document.getElementById('closeStatsPopupBtn');
+
+        let foundElementsClient = [];
+
+        function formatDateTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleString('pt-BR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        }
+
+
+        async function loadFamilies() {
+            try {
+                const response = await fetch('/familias');
+                if (!response.ok) {
+                    const errorDetails = await response.text();
+                    console.error(`Erro HTTP ao buscar famílias: ${response.status} ${response.statusText} - ${errorDetails}`);
+                    throw new Error(`Erro de rede ao carregar famílias (${response.status})`);
+                }
+                const families = await response.json();
+
+                familyFilterSelect.innerHTML = '<option value="">Todas as Famílias</option>';
+
+                if (families && families.length > 0) {
+                    families.forEach(family => {
+                        if (family && typeof family === 'string' && family.trim() !== '') {
+                            const option = document.createElement('option');
+                            option.value = family;
+                            option.textContent = family;
+                            familyFilterSelect.appendChild(option);
+                        }
+                    });
+                } else {
+                    const noFamiliesOption = document.createElement('option');
+                    noFamiliesOption.value = "";
+                    noFamiliesOption.textContent = "Nenhuma família encontrada";
+                    familyFilterSelect.appendChild(noFamiliesOption);
+                    familyFilterSelect.disabled = true;
+                    console.warn("Nenhuma família retornada do backend para popular o dropdown.");
+                }
+
+            } catch (error) {
+                console.error("Erro ao carregar famílias do servidor:", error);
+                const errorOption = document.createElement('option');
+                errorOption.value = "";
+                errorOption.textContent = "Erro ao carregar famílias";
+                familyFilterSelect.appendChild(errorOption);
+                familyFilterSelect.disabled = true;
+                messageParagraph.textContent = "Não foi possível carregar as famílias. Verifique o console do navegador (F12) para detalhes.";
+                messageParagraph.classList.add('error-message');
+            }
+        }
+
+        async function loadFoundElements() {
+            try {
+                const response = await fetch('/elementos/encontrados');
+                if (!response.ok) {
+                    const errorDetails = await response.text();
+                    console.error(`Erro HTTP ao carregar elementos encontrados: ${response.status} ${response.statusText} - ${errorDetails}`);
+                    throw new Error(`Erro de rede ao carregar elementos encontrados (${response.status})`);
+                }
+                const foundElementsFromServer = await response.json();
+                foundElementsClient = foundElementsFromServer;
+
+                foundElementsList.innerHTML = ''; 
+                
+                document.querySelectorAll('.empty-element-card').forEach(card => {
+                    card.classList.remove('element-revealed');
+                    card.querySelector('.symbol-display').textContent = '';
+                    card.querySelector('.name-display').textContent = '';
+                });
+
+
+                if (foundElementsClient && foundElementsClient.length > 0) {
+                    const selectedFamily = familyFilterSelect.value;
+
+                    foundElementsClient.forEach(element => {
+                        if (!selectedFamily || element.familia === selectedFamily) {
+                            const elementTag = document.createElement('span');
+                            elementTag.classList.add('found-element-tag');
+                            elementTag.textContent = `${element.nome} (${element.simbolo})`;
+                            foundElementsList.appendChild(elementTag);
+
+                            const elementCard = document.querySelector(`.empty-element-card[data-symbol="${element.simbolo}"]`);
+                            if (elementCard) {
+                                elementCard.classList.add('element-revealed');
+                                elementCard.querySelector('.symbol-display').textContent = element.simbolo;
+                                elementCard.querySelector('.name-display').textContent = element.nome;
+                            }
+                        }
+                    });
+
+                    if (foundElementsList.children.length === 0 && selectedFamily) {
+                        foundElementsList.innerHTML = `<p>Nenhum elemento encontrado nesta família ainda.</p>`;
+                    }
+
+                } else {
+                    foundElementsList.innerHTML = `<p>Nenhum elemento encontrado ainda. Digite um para começar!</p>`;
+                }
+
+            } catch (error) {
+                console.error("Erro ao carregar elementos encontrados:", error);
+                foundElementsList.innerHTML = `<p class="error-message">Erro ao carregar elementos encontrados. Verifique o console.</p>`;
+            }
+        }
+
+        async function submitElement() {
+            const elementName = elementInput.value.trim();
+            if (!elementName) {
+                messageParagraph.textContent = "Por favor, digite o nome ou símbolo de um elemento.";
+                messageParagraph.classList.add('error-message');
+                messageParagraph.classList.remove('success-message');
+                return;
+            }
+
+            messageParagraph.textContent = "Verificando elemento...";
+            messageParagraph.classList.remove('error-message', 'success-message');
+
+            try {
+                const response = await fetch('/elementos/submeter', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name: elementName })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    messageParagraph.textContent = result.message;
+                    messageParagraph.classList.add('success-message');
+                    messageParagraph.classList.remove('error-message');
+                    elementInput.value = '';
+
+                    loadFoundElements();
+
+                } else {
+                    messageParagraph.textContent = result.error || "Ocorreu um erro ao submeter o elemento.";
+                    messageParagraph.classList.add('error-message');
+                    messageParagraph.classList.remove('success-message');
+                }
+
+            } catch (error) {
+                console.error("Erro ao submeter elemento:", error);
+                messageParagraph.textContent = "Erro de conexão ao submeter o elemento. Tente novamente.";
+                messageParagraph.classList.add('error-message');
+                messageParagraph.classList.remove('success-message');
+            }
+        }
+
+        function resetQuizUI() {
+            foundElementsClient = [];
+            loadFoundElements();
+            elementInput.value = '';
+            messageParagraph.textContent = "Quiz reiniciado! Digite um elemento para começar.";
+            messageParagraph.classList.remove('error-message', 'success-message');
+            familyFilterSelect.value = '';
+            loadFamilies();
+        }
+
+        async function saveQuizProgress() {
+            const acertos = foundElementsClient.length;
+
+            try {
+                const response = await fetch('/quiz/salvar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        acertos: acertos,
+                        elementos: foundElementsClient
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    messageParagraph.textContent = `Quiz salvo com sucesso! Acertos: ${acertos}/118.`;
+                    messageParagraph.classList.add('success-message');
+                    messageParagraph.classList.remove('error-message');
+
+                    statsList.innerHTML = '';
+                    if (result.estatisticas && result.estatisticas.length > 0) {
+                        const ul = document.createElement('ul');
+                        result.estatisticas.forEach(stat => {
+                            const li = document.createElement('li');
+                            li.textContent = `${stat.nome} (${stat.simbolo}): ${stat.porcentagem}% dos quizzes`;
+                            ul.appendChild(li);
+                        });
+                        statsList.appendChild(ul);
+                    } else {
+                        statsList.innerHTML = '<p>Nenhuma estatística de uso de elementos encontrada ainda.</p>';
+                    }
+                    quizStatsPopup.style.display = 'flex';
+
+                } else {
+                    messageParagraph.textContent = result.error || "Erro ao salvar o quiz.";
+                    messageParagraph.classList.add('error-message');
+                    messageParagraph.classList.remove('success-message');
+                }
+
+            } catch (error) {
+                console.error("Erro ao salvar progresso do quiz:", error);
+                messageParagraph.textContent = "Erro de conexão ao salvar o quiz. Verifique o console.";
+                messageParagraph.classList.add('error-message');
+                messageParagraph.classList.remove('success-message');
+            }
+        }
+
+        elementInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                submitElement();
+            }
+        });
+
+        familyFilterSelect.addEventListener('change', loadFoundElements);
+
+        saveQuizBtn.addEventListener('click', saveQuizProgress);
+
+        closeStatsPopupBtn.addEventListener('click', () => {
+            quizStatsPopup.style.display = 'none';
+            resetQuizUI();
+        });
+
+        loadFamilies();
+        loadFoundElements();
+    </script>
+</body>
 </html>
