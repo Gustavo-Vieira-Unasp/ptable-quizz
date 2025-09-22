@@ -10,18 +10,17 @@
     <div class="container">
 
         <div class="input-zone-section">
-            <h1>Quiz de Elementos</h1>
+            <h1>Quiz da Tabela Periódica</h1>
             <div class="search-area">
                 <input type="text" id="elementInput" placeholder="Tente 'Cu' ou 'Rutherfórdio'">
                 <select id="familyFilterSelect">
                     <option value="">Todas as Famílias</option>
-                    </select>
+                </select>
             </div>
             <p id="message">Digite um elemento para começar o quiz.</p>
         </div>
 
         <hr> <div class="periodic-table-section">
-            <h1>Tabela Periódica</h1>
             <div id="periodic-table-grid">
                 <div class="empty-element-card" style="grid-column: 1; grid-row: 1;" data-symbol="H">
                     <div class="symbol-display"></div>
@@ -518,21 +517,20 @@
         <hr> <div class="elements-found-section">
             <h2>Elementos Encontrados:</h2>
             <div id="foundElementsList">
-                </div>
-            <button id="saveQuizBtn" class="save-button">Salvar Progresso do Quiz</button>
+            </div>
+            <button id="saveQuizBtn">Salvar Progresso</button>
         </div>
     </div>
 
-    <div id="quizStatsPopup" class="popup-overlay">
+    <div id="quizStatsPopup" class="popup-overlay" style="display: none;">
         <div class="popup-content">
             <h2>Estatísticas do Quiz</h2>
-            <div id="statsList">
-                </div>
-            <button id="closeStatsPopupBtn" class="save-button">OK</button>
+            <ul id="statsList">
+            </ul>
+            <button id="closeStatsPopupBtn">Ok</button>
         </div>
     </div>
 
-
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" type="module"></script>
 </body>
 </html>

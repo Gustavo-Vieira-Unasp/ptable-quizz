@@ -1,150 +1,125 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { isMongoConnected, dbName, collectionName, getDb } = require("../utils/db");
-const { normalizeString } = require("../utils/normalize");
+const fs = require('fs').promises;
+const path = require('path');
 
-const elementosData = require('../data/elementos');
+const elementosPath = path.join(__dirname, '../data/elementos.json');
+const respostasPath = path.join(__dirname, '../data/respostas.json');
 
-let foundElements = [];
-let elementosPreenchidosNoQuizz = new Set();
-
-router.get("/familias", async (req, res) => {
-    if (isMongoConnected) {
-        try {
-            const database = getDb().db(dbName);
-            const collection = database.collection(collectionName);
-            const families = await collection.distinct("familia");
-            const cleanedFamilies = families
-                .filter(f => f && typeof f === 'string' && f.trim() !== '')
-                .sort((a, b) => a.localeCompare(b));
-            res.json(cleanedFamilies);
-        } catch (error) {
-            console.error("Erro ao buscar famílias no MongoDB:", error);
-            res.status(500).json({ error: "Erro interno do servidor ao buscar as famílias." });
-        }
-    } else {
-        const families = [...new Set(elementosData.map(el => el.familia))].filter(Boolean).sort();
-        res.json(families);
-    }
-});
-
-router.post("/elementos/submeter", async (req, res) => {
-    const { name } = req.body;
-    if (!name || name.trim() === '') {
-        return res.status(400).json({ error: "O nome do elemento não pode ser vazio." });
-    }
-    const normalizedName = normalizeString(name);
-
-    let element = null;
-
-    if (isMongoConnected) {
-        try {
-            const database = getDb().db(dbName);
-            const collection = database.collection(collectionName);
-            
-            element = await collection.findOne({ simbolo: { $regex: `^${normalizedName}$`, $options: "i" } });
-            
-            if (!element) {
-                element = await collection.findOne({
-                    $or: [
-                        { nome: { $regex: `^${normalizedName}$`, $options: "i" } },
-                        { palavras_chave: { $regex: `\\b${normalizedName}\\b`, $options: "i" } }
-                    ]
-                });
-            }
-        } catch (error) {
-            console.error("Erro ao submeter elemento no MongoDB:", error);
-            return res.status(500).json({ error: "Erro interno do servidor ao verificar o elemento." });
-        }
-    } else {
-        element = elementosData.find(el => normalizeString(el.simbolo) === normalizedName);
-        
-        if (!element) {
-            element = elementosData.find(el => 
-                normalizeString(el.nome) === normalizedName ||
-                (el.palavras_chave && el.palavras_chave.some(kw => normalizeString(kw) === normalizedName))
-            );
-        }
-    }
-
-    if (element) {
-        const alreadyFound = foundElements.some(e => e.simbolo === element.simbolo);
-        if (alreadyFound) {
-            return res.status(200).json({ message: `Elemento '${element.nome}' (${element.simbolo}) já foi encontrado!`, element: element });
-        } else {
-            foundElements.push(element);
-            return res.status(200).json({ message: `Parabéns! Você encontrou o elemento '${element.nome}' (${element.simbolo})!`, element: element });
-        }
-    } else {
-        return res.status(404).json({ error: "Elemento não encontrado. Tente novamente!" });
-    }
-});
-
-router.get("/elementos/encontrados", (req, res) => {
-    res.json(foundElements);
-});
-
-router.post("/quiz/salvar", async (req, res) => {
-    if (!isMongoConnected) {
-        return res.status(500).json({ error: "O salvamento de quiz requer uma conexão ativa com o banco de dados. Tente novamente quando a conexão estiver disponível." });
-    }
-    
-    const { acertos, elementos } = req.body;
-
-    if (acertos === undefined || !elementos || !Array.isArray(elementos)) {
-        return res.status(400).json({ error: "Dados incompletos ou inválidos para salvar o quiz." });
-    }
-
+let elementosData = [];
+async function loadElements() {
     try {
-        const database = getDb().db(dbName);
-        const quizSavesCollection = database.collection('quiz_saves');
+        const data = await fs.readFile(elementosPath, 'utf8');
+        elementosData = JSON.parse(data);
+    } catch (error) {
+        console.error("Erro ao carregar elementos.json:", error);
+    }
+}
+loadElements();
 
-        const quizDataToSave = {
-            dateTime: new Date().toISOString(), 
-            acertos: acertos,
-            elementos: elementos.map(el => ({ simbolo: el.simbolo, nome: el.nome })) 
+router.get('/familias', (req, res) => {
+    try {
+        const familias = [...new Set(elementosData.map(e => e.familia))].filter(Boolean);
+        res.json(familias);
+    } catch (error) {
+        console.error("Erro ao processar famílias:", error);
+        res.status(500).json({ error: "Erro interno do servidor." });
+    }
+});
+
+let elementosEncontrados = [];
+
+router.get('/elementos/encontrados', (req, res) => {
+    res.json(elementosEncontrados);
+});
+
+router.post('/elementos/submeter', (req, res) => {
+    const { name } = req.body;
+    const elemento = elementosData.find(e => 
+        e.nome.toLowerCase() === name.toLowerCase() || 
+        e.simbolo.toLowerCase() === name.toLowerCase()
+    );
+
+    if (elemento) {
+        const jaEncontrado = elementosEncontrados.some(e => e.simbolo === elemento.simbolo);
+        if (!jaEncontrado) {
+            elementosEncontrados.push(elemento);
+            res.status(200).json({ message: "Elemento encontrado!", elemento });
+        } else {
+            res.status(200).json({ message: "Você já encontrou este elemento." });
+        }
+    } else {
+        res.status(404).json({ error: "Elemento não encontrado. Tente novamente." });
+    }
+});
+
+router.post('/elementos/limpar', async (req, res) => {
+    try {
+        elementosEncontrados = [];
+
+        console.log('Progresso do quiz limpo no servidor.');
+        res.status(200).json({ message: 'Progresso do quiz limpo com sucesso.' });
+    } catch (error) {
+        console.error('Erro ao limpar o progresso do quiz:', error);
+        res.status(500).json({ error: 'Erro interno do servidor ao limpar o progresso.' });
+    }
+});
+
+router.post('/quiz/salvar', async (req, res) => {
+    try {
+        const { quizData } = req.body;
+        
+        let quizHistory = {
+            historicoDeTentativas: []
+        };
+        
+        try {
+            const data = await fs.readFile(respostasPath, 'utf8');
+            const fileContent = JSON.parse(data);
+            if (fileContent.historicoDeTentativas && Array.isArray(fileContent.historicoDeTentativas)) {
+                quizHistory = fileContent;
+            }
+        } catch (readError) {
+            if (readError.code === 'ENOENT' || readError instanceof SyntaxError) {
+                console.log('Arquivo de respostas não encontrado ou inválido. Criando um novo.');
+            } else {
+                throw readError;
+            }
+        }
+        
+        quizHistory.historicoDeTentativas.push(quizData);
+        
+        const totalDeTentativas = quizHistory.historicoDeTentativas.length;
+        const allFoundElements = quizHistory.historicoDeTentativas.flatMap(q => q.elementosDaTentativa);
+        const elementCounts = {};
+        allFoundElements.forEach(name => {
+            elementCounts[name] = (elementCounts[name] || 0) + 1;
+        });
+        
+        const porcentagens = {};
+        for (const name in elementCounts) {
+            if (Object.prototype.hasOwnProperty.call(elementCounts, name)) {
+                const count = elementCounts[name];
+                const percentage = (count / totalDeTentativas) * 100;
+                porcentagens[name] = `${percentage.toFixed(0)}%`;
+            }
+        }
+        
+        const finalResponse = {
+            totalDeTentativas: totalDeTentativas,
+            dataUltimaTentativa: quizData.data,
+            acertos: `${quizData.acertos}/118`,
+            elementosDaTentativa: quizData.elementosDaTentativa,
+            Porcentagens: porcentagens
         };
 
-        const result = await quizSavesCollection.insertOne(quizDataToSave);
-
-        const totalQuizSaves = await quizSavesCollection.countDocuments();
-
-        let elementStats = [];
-        if (totalQuizSaves > 0) {
-            elementStats = await quizSavesCollection.aggregate([
-                { $unwind: "$elementos" },
-                {
-                    $group: {
-                        _id: "$elementos.simbolo", 
-                        nome: { $first: "$elementos.nome" },
-                        count: { $sum: 1 } 
-                    }
-                },
-                {
-                    $project: {
-                        _id: 0,
-                        simbolo: "$_id",
-                        nome: 1,
-                        porcentagem: {
-                            $round: [{
-                                $multiply: [{ $divide: ["$count", totalQuizSaves] }, 100]
-                            }, 2]
-                        }
-                    }
-                },
-                { $sort: { porcentagem: -1, nome: 1 } }
-            ]).toArray();
-        }
-
-        res.status(201).json({
-            message: "Progresso do quiz salvo com sucesso!",
-            id: result.insertedId,
-            estatisticas: elementStats
-        });
+        await fs.writeFile(respostasPath, JSON.stringify(quizHistory, null, 2), 'utf8');
+        
+        res.status(200).json(finalResponse);
 
     } catch (error) {
-        console.error("Erro ao salvar progresso do quiz:", error);
-        res.status(500).json({ error: "Erro interno ao salvar o progresso do quiz." });
+        console.error("Erro ao salvar quiz no arquivo JSON:", error);
+        res.status(500).json({ error: "Erro ao salvar o quiz. Verifique o console do servidor." });
     }
 });
 
