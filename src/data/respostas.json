@@ -6,6 +6,64 @@
       "elementosDaTentativa": [
         "Oxigênio"
       ]
+    },
+    {
+      "data": "2025-09-22T16:52:51.389Z",
+      "acertos": 18,
+      "elementosDaTentativa": [
+        "Hidrogênio",
+        "Iodo",
+        "Lantânio",
+        "Lutécio",
+        "Cálcio",
+        "Califórnio",
+        "Oxigênio",
+        "Hólmio",
+        "Ítrio",
+        "Carbono",
+        "Cobalto",
+        "Hélio",
+        "Cobre",
+        "Rutherfórdio",
+        "Potássio",
+        "Boro",
+        "Bromo",
+        "Bário"
+      ]
+    },
+    {
+      "data": "2025-09-22T17:54:41.991Z",
+      "acertos": 2,
+      "elementosDaTentativa": [
+        "Urânio",
+        "Oxigênio"
+      ]
+    },
+    {
+      "data": "2025-09-22T18:37:58.564Z",
+      "acertos": 0,
+      "elementosDaTentativa": []
+    },
+    {
+      "data": "2025-09-26T00:17:37.865Z",
+      "acertos": 15,
+      "elementosDaTentativa": [
+        "Bário",
+        "Ouro",
+        "Prata",
+        "Hélio",
+        "Hidrogênio",
+        "Cálcio",
+        "Ferro",
+        "Mercúrio",
+        "Potássio",
+        "Nitrogênio",
+        "Oxigênio",
+        "Lítio",
+        "Rutherfórdio",
+        "Cobre",
+        "Argônio"
+      ]
     }
   ]
 }
