@@ -1435,5 +1435,85 @@
             "og",
             "Og"
         ]
+    },
+    {
+        "nome": "Ródio",
+        "simbolo": "Rh",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "palavras_chave": [
+            "rodio",
+            "rhodium",
+            "rh",
+            "Rh"
+        ]
+    },
+    {
+        "nome": "Estanho",
+        "simbolo": "Sn",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "palavras_chave": [
+            "estanho",
+            "tin",
+            "sn",
+            "Sn",
+            "etain",
+            "étain",
+            "zinn"
+        ]
+    },
+    {
+        "nome": "Chumbo",
+        "simbolo": "Pb",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "palavras_chave": [
+            "chumbo",
+            "lead",
+            "pb",
+            "Pb",
+            "plomb",
+            "blei"
+        ]
+    },
+    {
+        "nome": "Bismuto",
+        "simbolo": "Bi",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "palavras_chave": [
+            "bismuto",
+            "bismuth",
+            "bi",
+            "Bi",
+            "bismut"
+        ]
+    },
+    {
+        "nome": "Plônio",
+        "simbolo": "Po",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "palavras_chave": [
+            "plonio",
+            "polonium",
+            "po",
+            "Po"
+        ]
+    },
+    {
+        "nome": "Ástato",
+        "simbolo": "At",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "palavras_chave": [
+            "astato",
+            "astatine",
+            "at",
+            "At",
+            "astate",
+            "astat"
+        ]
     }
 ]

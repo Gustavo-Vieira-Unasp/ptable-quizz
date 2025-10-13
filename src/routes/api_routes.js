@@ -34,23 +34,32 @@ router.get('/elementos/encontrados', (req, res) => {
 });
 
 router.post('/elementos/submeter', (req, res) => {
-    const { name } = req.body;
-    const elemento = elementosData.find(e => 
-        e.nome.toLowerCase() === name.toLowerCase() || 
-        e.simbolo.toLowerCase() === name.toLowerCase()
-    );
+    const { name } = req.body;
+    
+    const normalizedInput = name.toLowerCase().trim();
 
-    if (elemento) {
-        const jaEncontrado = elementosEncontrados.some(e => e.simbolo === elemento.simbolo);
-        if (!jaEncontrado) {
-            elementosEncontrados.push(elemento);
-            res.status(200).json({ message: "Elemento encontrado!", elemento });
-        } else {
-            res.status(200).json({ message: "Você já encontrou este elemento." });
-        }
-    } else {
-        res.status(404).json({ error: "Elemento não encontrado. Tente novamente." });
-    }
+    const elemento = elementosData.find(e => {
+        const matchesNome = e.nome.toLowerCase() === normalizedInput;
+        const matchesSimbolo = e.simbolo.toLowerCase() === normalizedInput;
+        
+        const matchesPalavrasChave = e.palavras_chave && e.palavras_chave.some(keyword => 
+            keyword.toLowerCase() === normalizedInput
+        );
+
+        return matchesNome || matchesSimbolo || matchesPalavrasChave;
+    });
+
+    if (elemento) {
+        const jaEncontrado = elementosEncontrados.some(e => e.simbolo === elemento.simbolo);
+        if (!jaEncontrado) {
+            elementosEncontrados.push(elemento);
+            res.status(200).json({ message: "Elemento encontrado!", elemento });
+        } else {
+            res.status(200).json({ message: "Você já encontrou este elemento." });
+        }
+    } else {
+        res.status(404).json({ error: "Elemento não encontrado. Tente novamente." });
+    }
 });
 
 router.post('/elementos/limpar', async (req, res) => {
