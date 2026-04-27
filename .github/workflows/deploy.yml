@@ -17,8 +17,8 @@ jobs:
 
       - name: Injetar Credenciais do Supabase
         run: |
-          sed -i "s|PLACEHOLDER_SUPABASE_URL|${{ secrets.SUPABASE_URL }}|g" js/database.js
-          sed -i "s|PLACEHOLDER_SUPABASE_KEY|${{ secrets.SUPABASE_KEY }}|g" js/database.js
+          sed -i 's|PLACEHOLDER_SUPABASE_URL|${{ secrets.SUPABASE_URL }}|g' js/database.js
+          sed -i 's|PLACEHOLDER_SUPABASE_KEY|${{ secrets.SUPABASE_KEY }}|g' js/database.js
 
       - name: Deploy para o GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
