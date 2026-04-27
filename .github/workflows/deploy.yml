@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Injetar Credenciais do Supabase
+        run: |
+          # Substitui os placeholders pelos valores dos Secrets
+          sed -i "s|PLACEHOLDER_SUPABASE_URL|${{ secrets.SUPABASE_URL }}|g" js/database.js
+          sed -i "s|PLACEHOLDER_SUPABASE_KEY|${{ secrets.SUPABASE_KEY }}|g" js/database.js
+
+      - name: Deploy para o GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          branch: gh-pages
