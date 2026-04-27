@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,7 +17,6 @@ jobs:
 
       - name: Injetar Credenciais do Supabase
         run: |
-          # Substitui os placeholders pelos valores dos Secrets
           sed -i "s|PLACEHOLDER_SUPABASE_URL|${{ secrets.SUPABASE_URL }}|g" js/database.js
           sed -i "s|PLACEHOLDER_SUPABASE_KEY|${{ secrets.SUPABASE_KEY }}|g" js/database.js
 
