@@ -1,0 +1,33 @@
+{
+  "name": "ptable-quizz",
+  "version": "1.0.0",
+  "description": "This is a quiz that uses the Elements of the Periodic Table, works with Symbol and name in Portuguese, French, English and German.\r ![System Image - Portuguese](docs/assets/system-image.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.8.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gustavo-Vieira-Unasp/ptable-quizz.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gustavo-Vieira-Unasp/ptable-quizz/issues"
+  },
+  "homepage": "https://github.com/Gustavo-Vieira-Unasp/ptable-quizz#readme",
+  "devDependencies": {
+    "vite": "^8.0.10"
+  }
+}

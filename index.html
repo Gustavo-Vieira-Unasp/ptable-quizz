@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Tabela Periódica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz: Elementos da Tabela Periódica</h1>
+        
+        <section class="quiz-section">
+            <div class="search-area">
+                <input type="text" id="elementInput" placeholder="Digite nome, símbolo ou palavra-chave..." autocomplete="off">
+                <select id="familyFilterSelect">
+                    <option value="">Todas as Famílias</option>
+                </select>
+                <button id="saveQuizBtn">Finalizar Quiz</button>
+            </div>
+            <p id="message"></p>
+            <div id="foundElementsList"></div>
+        </section>
+
+        <hr>
+
+        <section class="periodic-table-section">
+            <div id="periodic-table-grid"></div>
+        </section>
+    </div>
+
+    <div id="quizStatsPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Estatísticas da Tentativa</h2>
+            <ul id="statsList"></ul>
+            <button id="closeStatsPopupBtn" class="save-button">Fechar e Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</body>
+</html>

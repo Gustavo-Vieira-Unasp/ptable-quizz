@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+.search-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    min-width: 800px;
+}
+
+#results-quiz {
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+#foundElementsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.found-element-tag {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+#periodic-table-grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 4px;
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 8px;
+    min-width: 900px;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.empty-element-card {
+    background-color: #fdfdfd;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.element-revealed .symbol-display {
+    font-size: clamp(16px, 1.8vw, 26px); 
+    color: #000;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.element-revealed .name-display {
+    font-size: clamp(9px, 0.7vw, 11px);
+    color: #555;
+    white-space: nowrap;
+    word-break: break-all;
+    line-height: 1.1;
+    margin-top: 2px;
+}
+
+.empty-element-card .symbol-display,
+.empty-element-card .name-display {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.element-revealed {
+    background-color: #fff !important;
+    border-color: #0056b3;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.15);
+}
+
+.element-revealed .symbol-display,
+.element-revealed .name-display {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lanthanide-placeholder,
+.actinide-placeholder,
+.series-label {
+    display: none !important;
+}
+
+.lanthanide-placeholder,
+.actinide-placeholder {
+    display: flex !important;
+    background-color: #e0e0e0;
+    border: 1px dashed #bbb;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    
+    justify-content: center;
+    align-items: center;
+    
+    color: #777; 
+    font-size: clamp(8px, 0.7vw, 10px);
+    font-weight: bold;
+    text-align: center;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto; 
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; 
+}
+
+.popup-content ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .empty-element-card, .lanthanide-placeholder, .actinide-placeholder {
+        width: 40px;
+        height: 40px;
+    }
+}
