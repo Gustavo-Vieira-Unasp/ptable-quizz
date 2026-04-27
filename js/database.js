@@ -12,7 +12,7 @@ export async function saveAttempt(listaSimbolos) {
     const supabaseClient = getClient();
     const stringElementos = listaSimbolos.join(',');
     const { error } = await supabaseClient
-        .from('tentativas')
+        .from('tries')
         .insert([{ elementos_ids: stringElementos }]);
     
     if (error) console.error("Erro ao salvar tentativa:", error);
@@ -21,15 +21,15 @@ export async function saveAttempt(listaSimbolos) {
 export async function getGlobalRarity() {
     const supabaseClient = getClient();
     const { data, error } = await supabaseClient
-        .from('tentativas')
+        .from('tries')
         .select('elementos_ids');
 
     if (error) {
         console.error("Erro ao buscar dados:", error);
-        return { raridadeMap: {}, totalTentativas: 0 };
+        return { raridadeMap: {}, totaltries: 0 };
     }
 
-    const totalTentativas = data.length || 0;
+    const totaltries = data.length || 0;
     const contagem = {};
 
     data.forEach(row => {
@@ -42,8 +42,8 @@ export async function getGlobalRarity() {
 
     const raridadeMap = {};
     for (const simbolo in contagem) {
-        raridadeMap[simbolo] = ((contagem[simbolo] / totalTentativas) * 100).toFixed(1);
+        raridadeMap[simbolo] = ((contagem[simbolo] / totaltries) * 100).toFixed(1);
     }
 
-    return { raridadeMap, totalTentativas };
+    return { raridadeMap, totaltries };
 }
