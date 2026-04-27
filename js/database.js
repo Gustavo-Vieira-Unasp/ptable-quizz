@@ -1,8 +1,15 @@
 const SUPABASE_URL = 'PLACEHOLDER_SUPABASE_URL';
 const SUPABASE_KEY = 'PLACEHOLDER_SUPABASE_KEY';
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+function getClient() {
+    if (SUPABASE_URL.includes('PLACEHOLDER')) {
+        throw new Error("Supabase URL não foi injetada corretamente pelo CI/CD.");
+    }
+    return supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+}
 
 export async function saveAttempt(listaSimbolos) {
+    const supabaseClient = getClient();
     const stringElementos = listaSimbolos.join(',');
     const { error } = await supabaseClient
         .from('tentativas')
@@ -12,21 +19,23 @@ export async function saveAttempt(listaSimbolos) {
 }
 
 export async function getGlobalRarity() {
+    const supabaseClient = getClient();
     const { data, error } = await supabaseClient
         .from('tentativas')
         .select('elementos_ids');
 
     if (error) {
         console.error("Erro ao buscar dados:", error);
-        return {};
+        return { raridadeMap: {}, totalTentativas: 0 };
     }
 
-    const totalTentativas = data.length;
+    const totalTentativas = data.length || 0;
     const contagem = {};
 
     data.forEach(row => {
         const simbolos = row.elementos_ids.split(',');
-        simbolos.forEach(s => {
+        const unicosNaPartida = [...new Set(simbolos)];
+        unicosNaPartida.forEach(s => {
             if (s) contagem[s] = (contagem[s] || 0) + 1;
         });
     });
