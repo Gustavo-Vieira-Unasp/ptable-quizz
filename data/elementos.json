@@ -4,6 +4,8 @@
         "simbolo": "H",
         "estado": "Gás",
         "familia": "N/A",
+        "x": 1,
+        "y": 1,
         "palavras_chave": [
             "hidrogenio",
             "hydrogen",
@@ -14,10 +16,26 @@
         ]
     },
     {
+        "nome": "Hélio",
+        "simbolo": "He",
+        "estado": "Gás",
+        "familia": "Gases Nobres",
+        "x": 18,
+        "y": 1,
+        "palavras_chave": [
+            "helio",
+            "helium",
+            "he",
+            "He"
+        ]
+    },
+    {
         "nome": "Lítio",
         "simbolo": "Li",
         "estado": "Sólido",
         "familia": "Alcalinos",
+        "x": 1,
+        "y": 2,
         "palavras_chave": [
             "litio",
             "lithium",
@@ -26,73 +44,12 @@
         ]
     },
     {
-        "nome": "Sódio",
-        "simbolo": "Na",
-        "estado": "Sólido",
-        "familia": "Alcalinos",
-        "palavras_chave": [
-            "sodio",
-            "sodium",
-            "na",
-            "Na",
-            "Natrium"
-        ]
-    },
-    {
-        "nome": "Potássio",
-        "simbolo": "K",
-        "estado": "Sólido",
-        "familia": "Alcalinos",
-        "palavras_chave": [
-            "potassio",
-            "potassium",
-            "k",
-            "K",
-            "Kalium"
-        ]
-    },
-    {
-        "nome": "Rubídio",
-        "simbolo": "Rb",
-        "estado": "Sólido",
-        "familia": "Alcalinos",
-        "palavras_chave": [
-            "rubidio",
-            "rubidium",
-            "rb",
-            "Rb"
-        ]
-    },
-    {
-        "nome": "Césio",
-        "simbolo": "Cs",
-        "estado": "Sólido",
-        "familia": "Alcalinos",
-        "palavras_chave": [
-            "cesio",
-            "caesium",
-            "cs",
-            "Cs",
-            "cesium"
-        ]
-    },
-    {
-        "nome": "Frâncio",
-        "simbolo": "Fr",
-        "estado": "Sólido",
-        "familia": "Alcalinos",
-        "palavras_chave": [
-            "fracio",
-            "francium",
-            "fr",
-            "Fr"
-        ]
-    },
-    {
         "nome": "Berílio",
         "simbolo": "Be",
         "estado": "Sólido",
         "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 2,
         "palavras_chave": [
             "berilio",
             "beryllium",
@@ -101,551 +58,12 @@
         ]
     },
     {
-        "nome": "Magnésio",
-        "simbolo": "Mg",
-        "estado": "Sólido",
-        "familia": "Alcalinos Terrosos",
-        "palavras_chave": [
-            "magnesio",
-            "magnesium",
-            "mg",
-            "Mg"
-        ]
-    },
-    {
-        "nome": "Cálcio",
-        "simbolo": "Ca",
-        "estado": "Sólido",
-        "familia": "Alcalinos Terrosos",
-        "palavras_chave": [
-            "calcio",
-            "calcium",
-            "ca",
-            "Ca"
-        ]
-    },
-    {
-        "nome": "Estrôncio",
-        "simbolo": "Sr",
-        "estado": "Sólido",
-        "familia": "Alcalinos Terrosos",
-        "palavras_chave": [
-            "estroncio",
-            "strontium",
-            "sr",
-            "Sr"
-        ]
-    },
-    {
-        "nome": "Bário",
-        "simbolo": "Ba",
-        "estado": "Sólido",
-        "familia": "Alcalinos Terrosos",
-        "palavras_chave": [
-            "bario",
-            "barium",
-            "ba",
-            "Ba",
-            "baryum"
-        ]
-    },
-    {
-        "nome": "Rádio",
-        "simbolo": "Ra",
-        "estado": "Sólido",
-        "familia": "Alcalinos Terrosos",
-        "palavras_chave": [
-            "radio",
-            "radium",
-            "ra",
-            "Ra"
-        ]
-    },
-    {
-        "nome": "Escândio",
-        "simbolo": "Sc",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "escandio",
-            "scandium",
-            "sc",
-            "Sc"
-        ]
-    },
-    {
-        "nome": "Ítrio",
-        "simbolo": "Y",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "itrio",
-            "yttrium",
-            "y",
-            "Y"
-        ]
-    },
-    {
-        "nome": "Titânio",
-        "simbolo": "Ti",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "titanio",
-            "titanium",
-            "ti",
-            "Ti",
-            "Titan",
-            "Titane"
-        ]
-    },
-    {
-        "nome": "Zircônio",
-        "simbolo": "Zr",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "zirconio",
-            "zirconium",
-            "zr",
-            "Zr"
-        ]
-    },
-    {
-        "nome": "Hafnio",
-        "simbolo": "Hf",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "hafnio",
-            "hafnium",
-            "hf",
-            "Hf"
-        ]
-    },
-    {
-        "nome": "Rutherfórdio",
-        "simbolo": "Rf",
-        "estado": "Desconhecido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "rutherfordio",
-            "rutherfordium",
-            "rf",
-            "Rf"
-        ]
-    },
-    {
-        "nome": "Vanádio",
-        "simbolo": "V",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "vanadio",
-            "vanadium",
-            "v",
-            "V"
-        ]
-    },
-    {
-        "nome": "Nióbio",
-        "simbolo": "Nb",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "niobio",
-            "niobium",
-            "nb",
-            "Nb",
-            "Niob"
-        ]
-    },
-    {
-        "nome": "Tântalo",
-        "simbolo": "Ta",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "tantalo",
-            "tantalum",
-            "ta",
-            "Ta",
-            "Tantal",
-            "Tantale"
-        ]
-    },
-    {
-        "nome": "Dúbinio",
-        "simbolo": "Db",
-        "estado": "Desconhecido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "dubnio",
-            "Dubnium",
-            "db",
-            "Db"
-        ]
-    },
-    {
-        "nome": "Cromo",
-        "simbolo": "Cr",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "cromo",
-            "chromium",
-            "Cr",
-            "Cr",
-            "Chrom",
-            "Chrome"
-        ]
-    },
-    {
-        "nome": "Molibdênio",
-        "simbolo": "Mo",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "molibdenio",
-            "molybdenum",
-            "mo",
-            "Mo",
-            "molybdan",
-            "molybdane"
-        ]
-    },
-    {
-        "nome": "Tungstênio",
-        "simbolo": "W",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "tungstenio",
-            "tungsten",
-            "w",
-            "W",
-            "wolfram",
-            "tungstene"
-        ]
-    },
-    {
-        "nome": "Seabórgio",
-        "simbolo": "Sg",
-        "estado": "Desconhecido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "seaborgio",
-            "seaborgium",
-            "sg",
-            "Sg"
-        ]
-    },
-    {
-        "nome": "Manganês",
-        "simbolo": "Mn",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "manganes",
-            "manganese",
-            "mn",
-            "Mn",
-            "Mangan"
-        ]
-    },
-    {
-        "nome": "Tecnécio",
-        "simbolo": "Tc",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "tecnecio",
-            "technetium",
-            "tc",
-            "Tc"
-        ]
-    },
-    {
-        "nome": "Rênio",
-        "simbolo": "Re",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "renio",
-            "rhenium",
-            "re",
-            "Re"
-        ]
-    },
-    {
-        "nome": "Bóhrio",
-        "simbolo": "Bh",
-        "estado": "Desconhecido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "bohrio",
-            "bohrium",
-            "bh",
-            "Bh"
-        ]
-    },
-    {
-        "nome": "Ferro",
-        "simbolo": "Fe",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "ferro",
-            "iron",
-            "fe",
-            "Fe",
-            "Eisen",
-            "Fer"
-        ]
-    },
-    {
-        "nome": "Rutênio",
-        "simbolo": "Ru",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "rutenio",
-            "ruthenium",
-            "ru",
-            "Ru"
-        ]
-    },
-    {
-        "nome": "Ósmio",
-        "simbolo": "Os",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "osmio",
-            "osmium",
-            "os",
-            "Os"
-        ]
-    },
-    {
-        "nome": "Hássio",
-        "simbolo": "Hs",
-        "estado": "Desconhecido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "hassio",
-            "hassium",
-            "hs",
-            "Hs"
-        ]
-    },
-    {
-        "nome": "Cobalto",
-        "simbolo": "Co",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "cobalto",
-            "cobalt",
-            "co",
-            "Co"
-        ]
-    },
-    {
-        "nome": "Ródio",
-        "simbolo": "Ro",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "rodio",
-            "rhodium",
-            "ro",
-            "Ro"
-        ]
-    },
-    {
-        "nome": "Irídio",
-        "simbolo": "Ir",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "iridio",
-            "iridium",
-            "ir",
-            "Ir"
-        ]
-    },
-    {
-        "nome": "Niquel",
-        "simbolo": "Ni",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "niquel",
-            "nickel",
-            "ni",
-            "Ni"
-        ]
-    },
-    {
-        "nome": "Paládio",
-        "simbolo": "Pd",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "paladio",
-            "palladium",
-            "pd",
-            "Pd"
-        ]
-    },
-    {
-        "nome": "Platina",
-        "simbolo": "Pt",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "platina",
-            "platinum",
-            "pt",
-            "Pt",
-            "platin",
-            "platine"
-        ]
-    },
-    {
-        "nome": "Cobre",
-        "simbolo": "Cu",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "cobre",
-            "copper",
-            "cu",
-            "Cu",
-            "kupfer",
-            "cuivre"
-        ]
-    },
-    {
-        "nome": "Prata",
-        "simbolo": "Ag",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "prata",
-            "silver",
-            "ag",
-            "Ag",
-            "silber",
-            "argent"
-        ]
-    },
-    {
-        "nome": "Ouro",
-        "simbolo": "Au",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "ouro",
-            "gold",
-            "au",
-            "Au",
-            "or"
-        ]
-    },
-    {
-        "nome": "Zinco",
-        "simbolo": "Zn",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "zinco",
-            "zinc",
-            "zn",
-            "Zn",
-            "zink"
-        ]
-    },
-    {
-        "nome": "Cádmio",
-        "simbolo": "Cd",
-        "estado": "Sólido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "cadmio",
-            "cadmium",
-            "cd",
-            "Cd"
-        ]
-    },
-    {
-        "nome": "Mercúrio",
-        "simbolo": "Hg",
-        "estado": "Líquido",
-        "familia": "Metais de Transição",
-        "palavras_chave": [
-            "mercurio",
-            "mercury",
-            "hg",
-            "Hg",
-            "quecksilber",
-            "Mercure"
-        ]
-    },
-    {
-        "nome": "Alumínio",
-        "simbolo": "Al",
-        "estado": "Sólido",
-        "familia": "Metais de Pós-Transição",
-        "palavras_chave": [
-            "aluminio",
-            "aluminium",
-            "al",
-            "Al"
-        ]
-    },
-    {
-        "nome": "Gálio",
-        "simbolo": "Ga",
-        "estado": "Sólido",
-        "familia": "Metais de Pós-Transição",
-        "palavras_chave": [
-            "galio",
-            "gallium",
-            "ga",
-            "Ga"
-        ]
-    },
-    {
-        "nome": "Índio",
-        "simbolo": "In",
-        "estado": "Sólido",
-        "familia": "Metais de Pós-Transição",
-        "palavras_chave": [
-            "indio",
-            "indium",
-            "in",
-            "In"
-        ]
-    },
-    {
-        "nome": "Tálio",
-        "simbolo": "Tl",
-        "estado": "Sólido",
-        "familia": "Metais de Pós-Transição",
-        "palavras_chave": [
-            "talio",
-            "thallium",
-            "tl",
-            "Tl"
-        ]
-    },
-    {
         "nome": "Boro",
         "simbolo": "B",
         "estado": "Sólido",
         "familia": "Semi-Metais",
+        "x": 13,
+        "y": 2,
         "palavras_chave": [
             "boro",
             "boron",
@@ -656,90 +74,12 @@
         ]
     },
     {
-        "nome": "Silício",
-        "simbolo": "Si",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "silicio",
-            "silicon",
-            "si",
-            "Si",
-            "silicium"
-        ]
-    },
-    {
-        "nome": "Germânio",
-        "simbolo": "Ge",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "germanio",
-            "germanium",
-            "ge",
-            "Ge"
-        ]
-    },
-    {
-        "nome": "Arsênio",
-        "simbolo": "As",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "arsenio",
-            "arsenic",
-            "as",
-            "As",
-            "arsen"
-        ]
-    },
-    {
-        "nome": "Antimônio",
-        "simbolo": "Sb",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "antimonio",
-            "antimony",
-            "sb",
-            "Sb",
-            "antimon",
-            "antimoine"
-        ]
-    },
-    {
-        "nome": "Telúrio",
-        "simbolo": "Te",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "telurio",
-            "tellurium",
-            "te",
-            "Te",
-            "tellur",
-            "tellure"
-        ]
-    },
-    {
-        "nome": "Ástato",
-        "simbolo": "At",
-        "estado": "Sólido",
-        "familia": "Semi-Metais",
-        "palavras_chave": [
-            "astato",
-            "astatine",
-            "at",
-            "At",
-            "astat",
-            "astate"
-        ]
-    },
-    {
         "nome": "Carbono",
         "simbolo": "C",
         "estado": "Sólido",
         "familia": "Ametais",
+        "x": 14,
+        "y": 2,
         "palavras_chave": [
             "carbono",
             "carbon",
@@ -754,6 +94,8 @@
         "simbolo": "N",
         "estado": "Gás",
         "familia": "Ametais",
+        "x": 15,
+        "y": 2,
         "palavras_chave": [
             "azoto",
             "nitrogenio",
@@ -765,10 +107,114 @@
         ]
     },
     {
+        "nome": "Oxigênio",
+        "simbolo": "O",
+        "estado": "Gás",
+        "familia": "Ametais",
+        "x": 16,
+        "y": 2,
+        "palavras_chave": [
+            "oxigenio",
+            "oxygen",
+            "o",
+            "O",
+            "sauerstoff",
+            "oxygene"
+        ]
+    },
+    {
+        "nome": "Flúor",
+        "simbolo": "F",
+        "estado": "Gás",
+        "familia": "Ametais",
+        "x": 17,
+        "y": 2,
+        "palavras_chave": [
+            "fluor",
+            "fluorine",
+            "f",
+            "F"
+        ]
+    },
+    {
+        "nome": "Neônio",
+        "simbolo": "Ne",
+        "estado": "Gás",
+        "familia": "Gases Nobres",
+        "x": 18,
+        "y": 2,
+        "palavras_chave": [
+            "neonio",
+            "neon",
+            "ne",
+            "Ne"
+        ]
+    },
+    {
+        "nome": "Sódio",
+        "simbolo": "Na",
+        "estado": "Sólido",
+        "familia": "Alcalinos",
+        "x": 1,
+        "y": 3,
+        "palavras_chave": [
+            "sodio",
+            "sodium",
+            "na",
+            "Na",
+            "Natrium"
+        ]
+    },
+    {
+        "nome": "Magnésio",
+        "simbolo": "Mg",
+        "estado": "Sólido",
+        "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 3,
+        "palavras_chave": [
+            "magnesio",
+            "magnesium",
+            "mg",
+            "Mg"
+        ]
+    },
+    {
+        "nome": "Alumínio",
+        "simbolo": "Al",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "x": 13,
+        "y": 3,
+        "palavras_chave": [
+            "aluminio",
+            "aluminium",
+            "al",
+            "Al"
+        ]
+    },
+    {
+        "nome": "Silício",
+        "simbolo": "Si",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "x": 14,
+        "y": 3,
+        "palavras_chave": [
+            "silicio",
+            "silicon",
+            "si",
+            "Si",
+            "silicium"
+        ]
+    },
+    {
         "nome": "Fósforo",
         "simbolo": "P",
         "estado": "Sólido",
         "familia": "Ametais",
+        "x": 15,
+        "y": 3,
         "palavras_chave": [
             "fosforo",
             "phosphoro",
@@ -781,24 +227,12 @@
         ]
     },
     {
-        "nome": "Oxigênio",
-        "simbolo": "O",
-        "estado": "Gás",
-        "familia": "Ametais",
-        "palavras_chave": [
-            "oxigenio",
-            "oxygen",
-            "o",
-            "O",
-            "sauerstoff",
-            "oxygene"
-        ]
-    },
-    {
         "nome": "Enxofre",
         "simbolo": "S",
         "estado": "Sólido",
         "familia": "Ametais",
+        "x": 16,
+        "y": 3,
         "palavras_chave": [
             "enxofre",
             "sulfur",
@@ -809,35 +243,12 @@
         ]
     },
     {
-        "nome": "Selênio",
-        "simbolo": "Se",
-        "estado": "Sólido",
-        "familia": "Ametais",
-        "palavras_chave": [
-            "selenio",
-            "selenium",
-            "se",
-            "Se",
-            "selen"
-        ]
-    },
-    {
-        "nome": "Flúor",
-        "simbolo": "F",
-        "estado": "Gás",
-        "familia": "Ametais",
-        "palavras_chave": [
-            "fluor",
-            "fluorine",
-            "f",
-            "F"
-        ]
-    },
-    {
         "nome": "Cloro",
         "simbolo": "Cl",
         "estado": "Gás",
         "familia": "Ametais",
+        "x": 17,
+        "y": 3,
         "palavras_chave": [
             "cloro",
             "chlorine",
@@ -848,10 +259,263 @@
         ]
     },
     {
+        "nome": "Argônio",
+        "simbolo": "Ar",
+        "estado": "Gás",
+        "familia": "Gases Nobres",
+        "x": 18,
+        "y": 3,
+        "palavras_chave": [
+            "argonio",
+            "argon",
+            "ar",
+            "Ar"
+        ]
+    },
+    {
+        "nome": "Potássio",
+        "simbolo": "K",
+        "estado": "Sólido",
+        "familia": "Alcalinos",
+        "x": 1,
+        "y": 4,
+        "palavras_chave": [
+            "potassio",
+            "potassium",
+            "k",
+            "K",
+            "Kalium"
+        ]
+    },
+    {
+        "nome": "Cálcio",
+        "simbolo": "Ca",
+        "estado": "Sólido",
+        "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 4,
+        "palavras_chave": [
+            "calcio",
+            "calcium",
+            "ca",
+            "Ca"
+        ]
+    },
+    {
+        "nome": "Escândio",
+        "simbolo": "Sc",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 3,
+        "y": 4,
+        "palavras_chave": [
+            "escandio",
+            "scandium",
+            "sc",
+            "Sc"
+        ]
+    },
+    {
+        "nome": "Titânio",
+        "simbolo": "Ti",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 4,
+        "y": 4,
+        "palavras_chave": [
+            "titanio",
+            "titanium",
+            "ti",
+            "Ti",
+            "Titan",
+            "Titane"
+        ]
+    },
+    {
+        "nome": "Vanádio",
+        "simbolo": "V",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 5,
+        "y": 4,
+        "palavras_chave": [
+            "vanadio",
+            "vanadium",
+            "v",
+            "V"
+        ]
+    },
+    {
+        "nome": "Cromo",
+        "simbolo": "Cr",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 6,
+        "y": 4,
+        "palavras_chave": [
+            "cromo",
+            "chromium",
+            "Cr",
+            "Cr",
+            "Chrom",
+            "Chrome"
+        ]
+    },
+    {
+        "nome": "Manganês",
+        "simbolo": "Mn",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 7,
+        "y": 4,
+        "palavras_chave": [
+            "manganes",
+            "manganese",
+            "mn",
+            "Mn",
+            "Mangan"
+        ]
+    },
+    {
+        "nome": "Ferro",
+        "simbolo": "Fe",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 8,
+        "y": 4,
+        "palavras_chave": [
+            "ferro",
+            "iron",
+            "fe",
+            "Fe",
+            "Eisen",
+            "Fer"
+        ]
+    },
+    {
+        "nome": "Cobalto",
+        "simbolo": "Co",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 9,
+        "y": 4,
+        "palavras_chave": [
+            "cobalto",
+            "cobalt",
+            "co",
+            "Co"
+        ]
+    },
+    {
+        "nome": "Niquel",
+        "simbolo": "Ni",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 10,
+        "y": 4,
+        "palavras_chave": [
+            "niquel",
+            "nickel",
+            "ni",
+            "Ni"
+        ]
+    },
+    {
+        "nome": "Cobre",
+        "simbolo": "Cu",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 11,
+        "y": 4,
+        "palavras_chave": [
+            "cobre",
+            "copper",
+            "cu",
+            "Cu",
+            "kupfer",
+            "cuivre"
+        ]
+    },
+    {
+        "nome": "Zinco",
+        "simbolo": "Zn",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 12,
+        "y": 4,
+        "palavras_chave": [
+            "zinco",
+            "zinc",
+            "zn",
+            "Zn",
+            "zink"
+        ]
+    },
+    {
+        "nome": "Gálio",
+        "simbolo": "Ga",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "x": 13,
+        "y": 4,
+        "palavras_chave": [
+            "galio",
+            "gallium",
+            "ga",
+            "Ga"
+        ]
+    },
+    {
+        "nome": "Germânio",
+        "simbolo": "Ge",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "x": 14,
+        "y": 4,
+        "palavras_chave": [
+            "germanio",
+            "germanium",
+            "ge",
+            "Ge"
+        ]
+    },
+    {
+        "nome": "Arsênio",
+        "simbolo": "As",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "x": 15,
+        "y": 4,
+        "palavras_chave": [
+            "arsenio",
+            "arsenic",
+            "as",
+            "As",
+            "arsen"
+        ]
+    },
+    {
+        "nome": "Selênio",
+        "simbolo": "Se",
+        "estado": "Sólido",
+        "familia": "Ametais",
+        "x": 16,
+        "y": 4,
+        "palavras_chave": [
+            "selenio",
+            "selenium",
+            "se",
+            "Se",
+            "selen"
+        ]
+    },
+    {
         "nome": "Bromo",
         "simbolo": "Br",
         "estado": "Líquido",
         "familia": "Ametais",
+        "x": 17,
+        "y": 4,
         "palavras_chave": [
             "bromo",
             "bromine",
@@ -862,60 +526,12 @@
         ]
     },
     {
-        "nome": "Iodo",
-        "simbolo": "I",
-        "estado": "Sólido",
-        "familia": "Ametais",
-        "palavras_chave": [
-            "iodo",
-            "iodine",
-            "i",
-            "I",
-            "iod",
-            "iode"
-        ]
-    },
-    {
-        "nome": "Hélio",
-        "simbolo": "He",
-        "estado": "Gás",
-        "familia": "Gases Nobres",
-        "palavras_chave": [
-            "helio",
-            "helium",
-            "he",
-            "He"
-        ]
-    },
-    {
-        "nome": "Neônio",
-        "simbolo": "Ne",
-        "estado": "Gás",
-        "familia": "Gases Nobres",
-        "palavras_chave": [
-            "neonio",
-            "neon",
-            "ne",
-            "Ne"
-        ]
-    },
-    {
-        "nome": "Argônio",
-        "simbolo": "Ar",
-        "estado": "Gás",
-        "familia": "Gases Nobres",
-        "palavras_chave": [
-            "argonio",
-            "argon",
-            "ar",
-            "Ar"
-        ]
-    },
-    {
         "nome": "Criptônio",
         "simbolo": "Kr",
         "estado": "Gás",
         "familia": "Gases Nobres",
+        "x": 18,
+        "y": 4,
         "palavras_chave": [
             "criptonio",
             "cripton",
@@ -925,515 +541,118 @@
         ]
     },
     {
-        "nome": "Xenônio",
-        "simbolo": "Xe",
-        "estado": "Gás",
-        "familia": "Gases Nobres",
-        "palavras_chave": [
-            "xenonio",
-            "xenon",
-            "xe",
-            "Xe"
-        ]
-    },
-    {
-        "nome": "Radônio",
-        "simbolo": "Rn",
-        "estado": "Gás",
-        "familia": "Gases Nobres",
-        "palavras_chave": [
-            "radonio",
-            "radon",
-            "rn",
-            "Rn"
-        ]
-    },
-    {
-        "nome": "Lantânio",
-        "simbolo": "La",
+        "nome": "Rubídio",
+        "simbolo": "Rb",
         "estado": "Sólido",
-        "familia": "Latanídeo",
+        "familia": "Alcalinos",
+        "x": 1,
+        "y": 5,
         "palavras_chave": [
-            "lantanio",
-            "lanthanum",
-            "la",
-            "La",
-            "lanthan",
-            "lanthane"
+            "rubidio",
+            "rubidium",
+            "rb",
+            "Rb"
         ]
     },
     {
-        "nome": "Cério",
-        "simbolo": "Ce",
+        "nome": "Estrôncio",
+        "simbolo": "Sr",
         "estado": "Sólido",
-        "familia": "Latanídeo",
+        "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 5,
         "palavras_chave": [
-            "cerio",
-            "cerium",
-            "ce",
-            "Ce",
-            "cer"
+            "estroncio",
+            "strontium",
+            "sr",
+            "Sr"
         ]
     },
     {
-        "nome": "Praseodímio",
-        "simbolo": "Pr",
+        "nome": "Ítrio",
+        "simbolo": "Y",
         "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "praseodimio",
-            "praseodymium",
-            "pr",
-            "Pr",
-            "praseodym",
-            "praseodyme"
-        ]
-    },
-    {
-        "nome": "Neodímio",
-        "simbolo": "Nd",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "neodimio",
-            "neodymium",
-            "nd",
-            "Nd",
-            "neodym",
-            "neodyme"
-        ]
-    },
-    {
-        "nome": "Promécio",
-        "simbolo": "Pm",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "promecio",
-            "promethium",
-            "pm",
-            "Pm"
-        ]
-    },
-    {
-        "nome": "Samário",
-        "simbolo": "Sm",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "samario",
-            "samarium",
-            "sm",
-            "Sm"
-        ]
-    },
-    {
-        "nome": "Európio",
-        "simbolo": "Eu",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "europio",
-            "europium",
-            "eu",
-            "Eu"
-        ]
-    },
-    {
-        "nome": "Gadolínio",
-        "simbolo": "Gd",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "gadolinio",
-            "gadolinium",
-            "gd",
-            "Gd"
-        ]
-    },
-    {
-        "nome": "Térbio",
-        "simbolo": "Tb",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "terbio",
-            "terbium",
-            "tb",
-            "Tb"
-        ]
-    },
-    {
-        "nome": "Disprósio",
-        "simbolo": "Dy",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "disprosio",
-            "dysprosium",
-            "dy",
-            "Dy"
-        ]
-    },
-    {
-        "nome": "Hólmio",
-        "simbolo": "Ho",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "holmio",
-            "holmium",
-            "ho",
-            "Ho"
-        ]
-    },
-    {
-        "nome": "Érbio",
-        "simbolo": "Er",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "erbio",
-            "erbium",
-            "er",
-            "Er"
-        ]
-    },
-    {
-        "nome": "Túlio",
-        "simbolo": "Tm",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "tulio",
-            "thulium",
-            "tm",
-            "Tm"
-        ]
-    },
-    {
-        "nome": "Itérbio",
-        "simbolo": "Yb",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "iterbio",
-            "ytterbium",
-            "yb",
-            "Yb"
-        ]
-    },
-    {
-        "nome": "Lutécio",
-        "simbolo": "Lu",
-        "estado": "Sólido",
-        "familia": "Latanídeo",
-        "palavras_chave": [
-            "lutecio",
-            "lutetium",
-            "lu",
-            "Lu"
-        ]
-    },
-    {
-        "nome": "Actínio",
-        "simbolo": "Ac",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "actinio",
-            "actinium",
-            "ac",
-            "Ac"
-        ]
-    },
-    {
-        "nome": "Tório",
-        "simbolo": "Th",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "torio",
-            "thorium",
-            "th",
-            "Th"
-        ]
-    },
-    {
-        "nome": "Protactínio",
-        "simbolo": "Pa",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "protactinio",
-            "protactinium",
-            "pa",
-            "Pa"
-        ]
-    },
-    {
-        "nome": "Urânio",
-        "simbolo": "U",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "uranio",
-            "uranium",
-            "u",
-            "U",
-            "Uran"
-        ]
-    },
-    {
-        "nome": "Neptúnio",
-        "simbolo": "Np",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "neptunio",
-            "neptunium",
-            "np",
-            "Np"
-        ]
-    },
-    {
-        "nome": "Plutônio",
-        "simbolo": "Pu",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "plutonio",
-            "plutonium",
-            "pu",
-            "Pu"
-        ]
-    },
-    {
-        "nome": "Amerício",
-        "simbolo": "Am",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "americio",
-            "americium",
-            "am",
-            "Am"
-        ]
-    },
-    {
-        "nome": "Cúrio",
-        "simbolo": "Cm",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "curio",
-            "curium",
-            "cm",
-            "Cm"
-        ]
-    },
-    {
-        "nome": "Berquélio",
-        "simbolo": "Bk",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "berquelio",
-            "berkellium",
-            "bk",
-            "Bk"
-        ]
-    },
-    {
-        "nome": "Califórnio",
-        "simbolo": "Cf",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "californio",
-            "californium",
-            "cf",
-            "Cf"
-        ]
-    },
-    {
-        "nome": "Einstenio",
-        "simbolo": "Es",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "einstenio",
-            "einstenium",
-            "es",
-            "Es"
-        ]
-    },
-    {
-        "nome": "Férmio",
-        "simbolo": "Fm",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "fermio",
-            "fermium",
-            "fm",
-            "Fm"
-        ]
-    },
-    {
-        "nome": "Mendelévio",
-        "simbolo": "Md",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "mendelevio",
-            "mendelevium",
-            "md",
-            "Md"
-        ]
-    },
-    {
-        "nome": "Nobélio",
-        "simbolo": "No",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "nobelio",
-            "nobelium",
-            "no",
-            "No"
-        ]
-    },
-    {
-        "nome": "Leurêncio",
-        "simbolo": "Lr",
-        "estado": "Sólido",
-        "familia": "Actinídeo",
-        "palavras_chave": [
-            "laurencio",
-            "laurencium",
-            "lr",
-            "Lr"
-        ]
-    },
-    {
-        "nome": "Meitnério",
-        "simbolo": "Mt",
-        "estado": "Desconhecido",
         "familia": "Metais de Transição",
+        "x": 3,
+        "y": 5,
         "palavras_chave": [
-            "meitnerio",
-            "meitnerium",
-            "mt",
-            "Mt"
+            "itrio",
+            "yttrium",
+            "y",
+            "Y"
         ]
     },
     {
-        "nome": "Darmstádio",
-        "simbolo": "Ds",
-        "estado": "Desconhecido",
+        "nome": "Zircônio",
+        "simbolo": "Zr",
+        "estado": "Sólido",
         "familia": "Metais de Transição",
+        "x": 4,
+        "y": 5,
         "palavras_chave": [
-            "darmstadio",
-            "darmstadium",
-            "ds",
-            "Ds"
+            "zirconio",
+            "zirconium",
+            "zr",
+            "Zr"
         ]
     },
     {
-        "nome": "Roentegênio",
-        "simbolo": "Rg",
-        "estado": "Desconhecido",
+        "nome": "Nióbio",
+        "simbolo": "Nb",
+        "estado": "Sólido",
         "familia": "Metais de Transição",
+        "x": 5,
+        "y": 5,
         "palavras_chave": [
-            "roentegenio",
-            "roentegenium",
-            "rg",
-            "Rg"
+            "niobio",
+            "niobium",
+            "nb",
+            "Nb",
+            "Niob"
         ]
     },
     {
-        "nome": "Copérnico",
-        "simbolo": "Cn",
-        "estado": "Desconhecido",
+        "nome": "Molibdênio",
+        "simbolo": "Mo",
+        "estado": "Sólido",
         "familia": "Metais de Transição",
+        "x": 6,
+        "y": 5,
         "palavras_chave": [
-            "copernico",
-            "copernicium",
-            "cn",
-            "Cn"
+            "molibdenio",
+            "molybdenum",
+            "mo",
+            "Mo",
+            "molybdan",
+            "molybdane"
         ]
     },
     {
-        "nome": "Nihonium",
-        "simbolo": "Nh",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
+        "nome": "Tecnécio",
+        "simbolo": "Tc",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 7,
+        "y": 5,
         "palavras_chave": [
-            "nihonium",
-            "nh",
-            "Nh"
+            "tecnecio",
+            "technetium",
+            "tc",
+            "Tc"
         ]
     },
     {
-        "nome": "Fleróvio",
-        "simbolo": "Fl",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
+        "nome": "Rutênio",
+        "simbolo": "Ru",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 8,
+        "y": 5,
         "palavras_chave": [
-            "flerovio",
-            "flerovium",
-            "fl",
-            "Fl"
-        ]
-    },
-    {
-        "nome": "Moscóvio",
-        "simbolo": "Mc",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
-        "palavras_chave": [
-            "moscovio",
-            "moscovium",
-            "mc",
-            "Mc"
-        ]
-    },
-    {
-        "nome": "Livermório",
-        "simbolo": "Lv",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
-        "palavras_chave": [
-            "livermorio",
-            "livermorium",
-            "lv",
-            "Lv"
-        ]
-    },
-    {
-        "nome": "Tenesso",
-        "simbolo": "Ts",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
-        "palavras_chave": [
-            "tenesso",
-            "tennessine",
-            "ts",
-            "Ts",
-            "tenness",
-            "tennesse"
-        ]
-    },
-    {
-        "nome": "Oganesson",
-        "simbolo": "Og",
-        "estado": "Desconhecido",
-        "familia": "Teóricos",
-        "palavras_chave": [
-            "oganesson",
-            "og",
-            "Og"
+            "rutenio",
+            "ruthenium",
+            "ru",
+            "Ru"
         ]
     },
     {
@@ -1441,6 +660,8 @@
         "simbolo": "Rh",
         "estado": "Sólido",
         "familia": "Metais de Transição",
+        "x": 9,
+        "y": 5,
         "palavras_chave": [
             "rodio",
             "rhodium",
@@ -1449,10 +670,70 @@
         ]
     },
     {
+        "nome": "Paládio",
+        "simbolo": "Pd",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 10,
+        "y": 5,
+        "palavras_chave": [
+            "paladio",
+            "palladium",
+            "pd",
+            "Pd"
+        ]
+    },
+    {
+        "nome": "Prata",
+        "simbolo": "Ag",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 11,
+        "y": 5,
+        "palavras_chave": [
+            "prata",
+            "silver",
+            "ag",
+            "Ag",
+            "silber",
+            "argent"
+        ]
+    },
+    {
+        "nome": "Cádmio",
+        "simbolo": "Cd",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 12,
+        "y": 5,
+        "palavras_chave": [
+            "cadmio",
+            "cadmium",
+            "cd",
+            "Cd"
+        ]
+    },
+    {
+        "nome": "Índio",
+        "simbolo": "In",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "x": 13,
+        "y": 5,
+        "palavras_chave": [
+            "indio",
+            "indium",
+            "in",
+            "In"
+        ]
+    },
+    {
         "nome": "Estanho",
         "simbolo": "Sn",
         "estado": "Sólido",
         "familia": "Metais de Pós-Transição",
+        "x": 14,
+        "y": 5,
         "palavras_chave": [
             "estanho",
             "tin",
@@ -1464,10 +745,269 @@
         ]
     },
     {
+        "nome": "Antimônio",
+        "simbolo": "Sb",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "x": 15,
+        "y": 5,
+        "palavras_chave": [
+            "antimonio",
+            "antimony",
+            "sb",
+            "Sb",
+            "antimon",
+            "antimoine"
+        ]
+    },
+    {
+        "nome": "Telúrio",
+        "simbolo": "Te",
+        "estado": "Sólido",
+        "familia": "Semi-Metais",
+        "x": 16,
+        "y": 5,
+        "palavras_chave": [
+            "telurio",
+            "tellurium",
+            "te",
+            "Te",
+            "tellur",
+            "tellure"
+        ]
+    },
+    {
+        "nome": "Iodo",
+        "simbolo": "I",
+        "estado": "Sólido",
+        "familia": "Ametais",
+        "x": 17,
+        "y": 5,
+        "palavras_chave": [
+            "iodo",
+            "iodine",
+            "i",
+            "I",
+            "iod",
+            "iode"
+        ]
+    },
+    {
+        "nome": "Xenônio",
+        "simbolo": "Xe",
+        "estado": "Gás",
+        "familia": "Gases Nobres",
+        "x": 18,
+        "y": 5,
+        "palavras_chave": [
+            "xenonio",
+            "xenon",
+            "xe",
+            "Xe"
+        ]
+    },
+    {
+        "nome": "Césio",
+        "simbolo": "Cs",
+        "estado": "Sólido",
+        "familia": "Alcalinos",
+        "x": 1,
+        "y": 6,
+        "palavras_chave": [
+            "cesio",
+            "caesium",
+            "cs",
+            "Cs",
+            "cesium"
+        ]
+    },
+    {
+        "nome": "Bário",
+        "simbolo": "Ba",
+        "estado": "Sólido",
+        "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 6,
+        "palavras_chave": [
+            "bario",
+            "barium",
+            "ba",
+            "Ba",
+            "baryum"
+        ]
+    },
+    {
+        "nome": "Lantânio",
+        "simbolo": "La",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 3,
+        "y": 8,
+        "palavras_chave": [
+            "lantanio",
+            "lanthanum",
+            "la",
+            "La",
+            "lanthan",
+            "lanthane"
+        ]
+    },
+    {
+        "nome": "Hafnio",
+        "simbolo": "Hf",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 4,
+        "y": 6,
+        "palavras_chave": [
+            "hafnio",
+            "hafnium",
+            "hf",
+            "Hf"
+        ]
+    },
+    {
+        "nome": "Tântalo",
+        "simbolo": "Ta",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 5,
+        "y": 6,
+        "palavras_chave": [
+            "tantalo",
+            "tantalum",
+            "ta",
+            "Ta",
+            "Tantal",
+            "Tantale"
+        ]
+    },
+    {
+        "nome": "Tungstênio",
+        "simbolo": "W",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 6,
+        "y": 6,
+        "palavras_chave": [
+            "tungstenio",
+            "tungsten",
+            "w",
+            "W",
+            "wolfram",
+            "tungstene"
+        ]
+    },
+    {
+        "nome": "Rênio",
+        "simbolo": "Re",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 7,
+        "y": 6,
+        "palavras_chave": [
+            "renio",
+            "rhenium",
+            "re",
+            "Re"
+        ]
+    },
+    {
+        "nome": "Ósmio",
+        "simbolo": "Os",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 8,
+        "y": 6,
+        "palavras_chave": [
+            "osmio",
+            "osmium",
+            "os",
+            "Os"
+        ]
+    },
+    {
+        "nome": "Irídio",
+        "simbolo": "Ir",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 9,
+        "y": 6,
+        "palavras_chave": [
+            "iridio",
+            "iridium",
+            "ir",
+            "Ir"
+        ]
+    },
+    {
+        "nome": "Platina",
+        "simbolo": "Pt",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 10,
+        "y": 6,
+        "palavras_chave": [
+            "platina",
+            "platinum",
+            "pt",
+            "Pt",
+            "platin",
+            "platine"
+        ]
+    },
+    {
+        "nome": "Ouro",
+        "simbolo": "Au",
+        "estado": "Sólido",
+        "familia": "Metais de Transição",
+        "x": 11,
+        "y": 6,
+        "palavras_chave": [
+            "ouro",
+            "gold",
+            "au",
+            "Au",
+            "or"
+        ]
+    },
+    {
+        "nome": "Mercúrio",
+        "simbolo": "Hg",
+        "estado": "Líquido",
+        "familia": "Metais de Transição",
+        "x": 12,
+        "y": 6,
+        "palavras_chave": [
+            "mercurio",
+            "mercury",
+            "hg",
+            "Hg",
+            "quecksilber",
+            "Mercure"
+        ]
+    },
+    {
+        "nome": "Tálio",
+        "simbolo": "Tl",
+        "estado": "Sólido",
+        "familia": "Metais de Pós-Transição",
+        "x": 13,
+        "y": 6,
+        "palavras_chave": [
+            "talio",
+            "thallium",
+            "tl",
+            "Tl"
+        ]
+    },
+    {
         "nome": "Chumbo",
         "simbolo": "Pb",
         "estado": "Sólido",
         "familia": "Metais de Pós-Transição",
+        "x": 14,
+        "y": 6,
         "palavras_chave": [
             "chumbo",
             "lead",
@@ -1482,6 +1022,8 @@
         "simbolo": "Bi",
         "estado": "Sólido",
         "familia": "Metais de Pós-Transição",
+        "x": 15,
+        "y": 6,
         "palavras_chave": [
             "bismuto",
             "bismuth",
@@ -1495,6 +1037,8 @@
         "simbolo": "Po",
         "estado": "Sólido",
         "familia": "Metais de Pós-Transição",
+        "x": 16,
+        "y": 6,
         "palavras_chave": [
             "plonio",
             "polonium",
@@ -1507,13 +1051,679 @@
         "simbolo": "At",
         "estado": "Sólido",
         "familia": "Semi-Metais",
+        "x": 17,
+        "y": 6,
         "palavras_chave": [
             "astato",
             "astatine",
             "at",
             "At",
-            "astate",
-            "astat"
+            "astat",
+            "astate"
+        ]
+    },
+    {
+        "nome": "Radônio",
+        "simbolo": "Rn",
+        "estado": "Gás",
+        "familia": "Gases Nobres",
+        "x": 18,
+        "y": 6,
+        "palavras_chave": [
+            "radonio",
+            "radon",
+            "rn",
+            "Rn"
+        ]
+    },
+    {
+        "nome": "Frâncio",
+        "simbolo": "Fr",
+        "estado": "Sólido",
+        "familia": "Alcalinos",
+        "x": 1,
+        "y": 7,
+        "palavras_chave": [
+            "fracio",
+            "francium",
+            "fr",
+            "Fr"
+        ]
+    },
+    {
+        "nome": "Rádio",
+        "simbolo": "Ra",
+        "estado": "Sólido",
+        "familia": "Alcalinos Terrosos",
+        "x": 2,
+        "y": 7,
+        "palavras_chave": [
+            "radio",
+            "radium",
+            "ra",
+            "Ra"
+        ]
+    },
+    {
+        "nome": "Actínio",
+        "simbolo": "Ac",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 3,
+        "y": 9,
+        "palavras_chave": [
+            "actinio",
+            "actinium",
+            "ac",
+            "Ac"
+        ]
+    },
+    {
+        "nome": "Rutherfórdio",
+        "simbolo": "Rf",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 4,
+        "y": 7,
+        "palavras_chave": [
+            "rutherfordio",
+            "rutherfordium",
+            "rf",
+            "Rf"
+        ]
+    },
+    {
+        "nome": "Dúbinio",
+        "simbolo": "Db",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 5,
+        "y": 7,
+        "palavras_chave": [
+            "dubnio",
+            "Dubnium",
+            "db",
+            "Db"
+        ]
+    },
+    {
+        "nome": "Seabórgio",
+        "simbolo": "Sg",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 6,
+        "y": 7,
+        "palavras_chave": [
+            "seaborgio",
+            "seaborgium",
+            "sg",
+            "Sg"
+        ]
+    },
+    {
+        "nome": "Bóhrio",
+        "simbolo": "Bh",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 7,
+        "y": 7,
+        "palavras_chave": [
+            "bohrio",
+            "bohrium",
+            "bh",
+            "Bh"
+        ]
+    },
+    {
+        "nome": "Hássio",
+        "simbolo": "Hs",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 8,
+        "y": 7,
+        "palavras_chave": [
+            "hassio",
+            "hassium",
+            "hs",
+            "Hs"
+        ]
+    },
+    {
+        "nome": "Meitnério",
+        "simbolo": "Mt",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 9,
+        "y": 7,
+        "palavras_chave": [
+            "meitnerio",
+            "meitnerium",
+            "mt",
+            "Mt"
+        ]
+    },
+    {
+        "nome": "Darmstádio",
+        "simbolo": "Ds",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 10,
+        "y": 7,
+        "palavras_chave": [
+            "darmstadio",
+            "darmstadium",
+            "ds",
+            "Ds"
+        ]
+    },
+    {
+        "nome": "Roentegênio",
+        "simbolo": "Rg",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 11,
+        "y": 7,
+        "palavras_chave": [
+            "roentegenio",
+            "roentegenium",
+            "rg",
+            "Rg"
+        ]
+    },
+    {
+        "nome": "Copérnico",
+        "simbolo": "Cn",
+        "estado": "Desconhecido",
+        "familia": "Metais de Transição",
+        "x": 12,
+        "y": 7,
+        "palavras_chave": [
+            "copernico",
+            "copernicium",
+            "cn",
+            "Cn"
+        ]
+    },
+    {
+        "nome": "Nihonium",
+        "simbolo": "Nh",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 13,
+        "y": 7,
+        "palavras_chave": [
+            "nihonium",
+            "nh",
+            "Nh"
+        ]
+    },
+    {
+        "nome": "Fleróvio",
+        "simbolo": "Fl",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 14,
+        "y": 7,
+        "palavras_chave": [
+            "flerovio",
+            "flerovium",
+            "fl",
+            "Fl"
+        ]
+    },
+    {
+        "nome": "Moscóvio",
+        "simbolo": "Mc",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 15,
+        "y": 7,
+        "palavras_chave": [
+            "moscovio",
+            "moscovium",
+            "mc",
+            "Mc"
+        ]
+    },
+    {
+        "nome": "Livermório",
+        "simbolo": "Lv",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 16,
+        "y": 7,
+        "palavras_chave": [
+            "livermorio",
+            "livermorium",
+            "lv",
+            "Lv"
+        ]
+    },
+    {
+        "nome": "Tenesso",
+        "simbolo": "Ts",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 17,
+        "y": 7,
+        "palavras_chave": [
+            "tenesso",
+            "tennessine",
+            "ts",
+            "Ts",
+            "tenness",
+            "tennesse"
+        ]
+    },
+    {
+        "nome": "Oganesson",
+        "simbolo": "Og",
+        "estado": "Desconhecido",
+        "familia": "Teóricos",
+        "x": 18,
+        "y": 7,
+        "palavras_chave": [
+            "oganesson",
+            "og",
+            "Og"
+        ]
+    },
+    {
+        "nome": "Cério",
+        "simbolo": "Ce",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 4,
+        "y": 8,
+        "palavras_chave": [
+            "cerio",
+            "cerium",
+            "ce",
+            "Ce",
+            "cer"
+        ]
+    },
+    {
+        "nome": "Praseodímio",
+        "simbolo": "Pr",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 5,
+        "y": 8,
+        "palavras_chave": [
+            "praseodimio",
+            "praseodymium",
+            "pr",
+            "Pr",
+            "praseodym",
+            "praseodyme"
+        ]
+    },
+    {
+        "nome": "Neodímio",
+        "simbolo": "Nd",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 6,
+        "y": 8,
+        "palavras_chave": [
+            "neodimio",
+            "neodymium",
+            "nd",
+            "Nd",
+            "neodym",
+            "neodyme"
+        ]
+    },
+    {
+        "nome": "Promécio",
+        "simbolo": "Pm",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 7,
+        "y": 8,
+        "palavras_chave": [
+            "promecio",
+            "promethium",
+            "pm",
+            "Pm"
+        ]
+    },
+    {
+        "nome": "Samário",
+        "simbolo": "Sm",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 8,
+        "y": 8,
+        "palavras_chave": [
+            "samario",
+            "samarium",
+            "sm",
+            "Sm"
+        ]
+    },
+    {
+        "nome": "Európio",
+        "simbolo": "Eu",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 9,
+        "y": 8,
+        "palavras_chave": [
+            "europio",
+            "europium",
+            "eu",
+            "Eu"
+        ]
+    },
+    {
+        "nome": "Gadolínio",
+        "simbolo": "Gd",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 10,
+        "y": 8,
+        "palavras_chave": [
+            "gadolinio",
+            "gadolinium",
+            "gd",
+            "Gd"
+        ]
+    },
+    {
+        "nome": "Térbio",
+        "simbolo": "Tb",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 11,
+        "y": 8,
+        "palavras_chave": [
+            "terbio",
+            "terbium",
+            "tb",
+            "Tb"
+        ]
+    },
+    {
+        "nome": "Disprósio",
+        "simbolo": "Dy",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 12,
+        "y": 8,
+        "palavras_chave": [
+            "disprosio",
+            "dysprosium",
+            "dy",
+            "Dy"
+        ]
+    },
+    {
+        "nome": "Hólmio",
+        "simbolo": "Ho",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 13,
+        "y": 8,
+        "palavras_chave": [
+            "holmio",
+            "holmium",
+            "ho",
+            "Ho"
+        ]
+    },
+    {
+        "nome": "Érbio",
+        "simbolo": "Er",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 14,
+        "y": 8,
+        "palavras_chave": [
+            "erbio",
+            "erbium",
+            "er",
+            "Er"
+        ]
+    },
+    {
+        "nome": "Túlio",
+        "simbolo": "Tm",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 15,
+        "y": 8,
+        "palavras_chave": [
+            "tulio",
+            "thulium",
+            "tm",
+            "Tm"
+        ]
+    },
+    {
+        "nome": "Itérbio",
+        "simbolo": "Yb",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 16,
+        "y": 8,
+        "palavras_chave": [
+            "iterbio",
+            "ytterbium",
+            "yb",
+            "Yb"
+        ]
+    },
+    {
+        "nome": "Lutécio",
+        "simbolo": "Lu",
+        "estado": "Sólido",
+        "familia": "Lantanídeo",
+        "x": 17,
+        "y": 8,
+        "palavras_chave": [
+            "lutecio",
+            "lutetium",
+            "lu",
+            "Lu"
+        ]
+    },
+    {
+        "nome": "Tório",
+        "simbolo": "Th",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 4,
+        "y": 9,
+        "palavras_chave": [
+            "torio",
+            "thorium",
+            "th",
+            "Th"
+        ]
+    },
+    {
+        "nome": "Protactínio",
+        "simbolo": "Pa",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 5,
+        "y": 9,
+        "palavras_chave": [
+            "protactinio",
+            "protactinium",
+            "pa",
+            "Pa"
+        ]
+    },
+    {
+        "nome": "Urânio",
+        "simbolo": "U",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 6,
+        "y": 9,
+        "palavras_chave": [
+            "uranio",
+            "uranium",
+            "u",
+            "U",
+            "Uran"
+        ]
+    },
+    {
+        "nome": "Neptúnio",
+        "simbolo": "Np",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 7,
+        "y": 9,
+        "palavras_chave": [
+            "neptunio",
+            "neptunium",
+            "np",
+            "Np"
+        ]
+    },
+    {
+        "nome": "Plutônio",
+        "simbolo": "Pu",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 8,
+        "y": 9,
+        "palavras_chave": [
+            "plutonio",
+            "plutonium",
+            "pu",
+            "Pu"
+        ]
+    },
+    {
+        "nome": "Amerício",
+        "simbolo": "Am",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 9,
+        "y": 9,
+        "palavras_chave": [
+            "americio",
+            "americium",
+            "am",
+            "Am"
+        ]
+    },
+    {
+        "nome": "Cúrio",
+        "simbolo": "Cm",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 10,
+        "y": 9,
+        "palavras_chave": [
+            "curio",
+            "curium",
+            "cm",
+            "Cm"
+        ]
+    },
+    {
+        "nome": "Berquélio",
+        "simbolo": "Bk",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 11,
+        "y": 9,
+        "palavras_chave": [
+            "berquelio",
+            "berkellium",
+            "bk",
+            "Bk"
+        ]
+    },
+    {
+        "nome": "Califórnio",
+        "simbolo": "Cf",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 12,
+        "y": 9,
+        "palavras_chave": [
+            "californio",
+            "californium",
+            "cf",
+            "Cf"
+        ]
+    },
+    {
+        "nome": "Einstenio",
+        "simbolo": "Es",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 13,
+        "y": 9,
+        "palavras_chave": [
+            "einstenio",
+            "einstenium",
+            "es",
+            "Es"
+        ]
+    },
+    {
+        "nome": "Férmio",
+        "simbolo": "Fm",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 14,
+        "y": 9,
+        "palavras_chave": [
+            "fermio",
+            "fermium",
+            "fm",
+            "Fm"
+        ]
+    },
+    {
+        "nome": "Mendelévio",
+        "simbolo": "Md",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 15,
+        "y": 9,
+        "palavras_chave": [
+            "mendelevio",
+            "mendelevium",
+            "md",
+            "Md"
+        ]
+    },
+    {
+        "nome": "Nobélio",
+        "simbolo": "No",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 16,
+        "y": 9,
+        "palavras_chave": [
+            "nobelio",
+            "nobelium",
+            "no",
+            "No"
+        ]
+    },
+    {
+        "nome": "Leurêncio",
+        "simbolo": "Lr",
+        "estado": "Sólido",
+        "familia": "Actinídeo",
+        "x": 17,
+        "y": 9,
+        "palavras_chave": [
+            "laurencio",
+            "laurencium",
+            "lr",
+            "Lr"
         ]
     }
 ]
