@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             const simbolosEncontrados = foundElements.map(el => el.simbolo);
             await saveAttempt(simbolosEncontrados);
 
-            const { raridadeMap, totalTentativas } = await getGlobalRarity();
+            const { raridadeMap, totaltries } = await getGlobalRarity();
 
-            renderStatsPopup(raridadeMap, totalTentativas);
+            renderStatsPopup(raridadeMap, totaltries);
 
         } catch (error) {
             console.error("Erro ao processar estatísticas globais:", error);
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    function renderStatsPopup(raridadeMap, totalTentativas) {
+    function renderStatsPopup(raridadeMap, totaltries) {
         if (!statsList || !quizStatsPopup) return;
 
         const acertos = foundElements.length;
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div style="margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px;">
                 <h3 style="margin: 0; color: #0056b3;">Resultado da Rodada</h3>
                 <p>Você encontrou <strong>${acertos}</strong> de <strong>${total}</strong> elementos.</p>
-                <small>Baseado em ${totalTentativas} tentativas globais.</small>
+                <small>Baseado em ${totaltries} tentativas globais.</small>
             </div>
             <h4 style="text-align: left; margin-bottom: 10px;">Raridade dos seus acertos:</h4>
             <ul style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;">

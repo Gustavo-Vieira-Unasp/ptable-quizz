@@ -30,6 +30,11 @@ export async function getGlobalRarity() {
     }
 
     const totaltries = data.length || 0;
+
+    if (totaltries === 0) {
+        return { raridadeMap: {}, totaltries: 0 };
+    }
+
     const contagem = {};
 
     data.forEach(row => {
