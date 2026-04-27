@@ -10,6 +10,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -17,13 +18,17 @@ body {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow-x: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 h1, h2 {
     color: #0056b3;
     text-align: center;
     margin-bottom: 20px;
 }
+
 hr {
     border: 0;
     height: 1px;
@@ -31,44 +36,42 @@ hr {
     margin: 30px 0;
 }
 
-.quiz-section {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
 .search-area {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
+
 input[type="text"], select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
+
 input[type="text"] {
     flex-grow: 1;
-    min-width: 200px;
+    min-width: 800px;
 }
-select {
-    min-width: 150px;
-}
+
 #results-quiz {
-    margin-top: 20px;
-    padding-top: 20px;
+    text-align: center;
 }
+
 .error-message {
     color: red;
     font-weight: bold;
 }
+
 .success-message {
     color: green;
     font-weight: bold;
 }
+
 #foundElementsList {
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +79,7 @@ select {
     margin-top: 15px;
     justify-content: center;
 }
+
 .found-element-tag {
     background-color: #007bff;
     color: white;
@@ -85,124 +89,92 @@ select {
     white-space: nowrap;
 }
 
-.periodic-table-section {
-    margin-top: 40px;
-}
 #periodic-table-grid {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(9, auto);
-    gap: 3px;
-    justify-content: center;
-    align-items: start;
-    padding: 10px;
-    border: 1px solid #ccc;
+    grid-template-rows: repeat(9, 1fr);
+    gap: 4px;
+    padding: 15px;
     background-color: #eee;
+    border-radius: 8px;
+    min-width: 900px;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .empty-element-card {
     background-color: #fdfdfd;
     border: 1px solid #d3d3d3;
-    border-radius: 6px;
-    padding: 5px;
+    border-radius: 4px;
+    padding: 3px;
     text-align: center;
-    height: 60px;
-    width: 100%;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7em;
-    color: #aaa;
-}
-.empty-space {
-    visibility: hidden;
-    border: 0; 
-    padding: 0; 
-    height: 0; 
-    min-height: auto;
-}
-.lanthanide-placeholder,
-.actinide-placeholder {
-    background-color: #e0e0e0;
-    border: 1px dashed #bbb;
-    color: #777;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 0.8em;
-    font-weight: bold;
-    visibility: visible;
-}
-
-.series-label {
-    grid-column: 1 / span 2;
-    text-align: right;
-    padding-right: 10px;
-    font-weight: bold;
-    color: #555;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.element-revealed {
-    background-color: #f0f0f0; 
-    color: #333;
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: rotateY(0deg);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .element-revealed .symbol-display {
-    font-size: 2.5em;
+    font-size: clamp(16px, 1.8vw, 26px); 
+    color: #000;
+    font-weight: bold;
     line-height: 1;
-    margin-bottom: 5px;
 }
 
 .element-revealed .name-display {
-    font-size: 0.75em;
+    font-size: clamp(9px, 0.7vw, 11px);
     color: #555;
-    word-break: break-word;
-    padding: 0 1px; 
+    white-space: nowrap;
+    word-break: break-all;
     line-height: 1.1;
+    margin-top: 2px;
 }
 
 .empty-element-card .symbol-display,
 .empty-element-card .name-display {
     visibility: hidden;
-    opacity: 0; 
-    transition: visibility 0s 0.3s, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.element-revealed {
+    background-color: #fff !important;
+    border-color: #0056b3;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.15);
 }
 
 .element-revealed .symbol-display,
 .element-revealed .name-display {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.lanthanide-placeholder,
+.actinide-placeholder,
+.series-label {
+    display: none !important;
 }
 
 .lanthanide-placeholder,
 .actinide-placeholder {
-    display: flex;
+    display: flex !important;
+    background-color: #e0e0e0;
+    border: 1px dashed #bbb;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    
     justify-content: center;
     align-items: center;
-    font-size: 0.9em;
-    color: #777;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
+    
+    color: #777; 
+    font-size: clamp(8px, 0.7vw, 10px);
+    font-weight: bold;
+    text-align: center;
 }
 
 .popup-overlay {
@@ -234,13 +206,11 @@ select {
 .popup-content h2 {
     margin-top: 0;
     color: #333;
-    margin-bottom: 20px;
 }
 
 .popup-content ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px 0;
     text-align: left; 
 }
 
@@ -250,10 +220,19 @@ select {
     color: #555;
 }
 
-.popup-content ul li:last-child {
-    border-bottom: none;
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.popup-content .save-button {
-    margin-top: 20px;
+@media (max-width: 1000px) {
+    .empty-element-card, .lanthanide-placeholder, .actinide-placeholder {
+        width: 40px;
+        height: 40px;
+    }
 }
