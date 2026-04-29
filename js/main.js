@@ -53,16 +53,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!jaEncontrado) {
                 foundElements.push(elemento);
                 revealElement(elemento);
-                
-                elementInput.value = '';
                 showMessage(`Boa! ${elemento.nome} encontrado.`, "success");
             } else {
-                elementInput.value = '';
                 showMessage("Você já encontrou este elemento!", "warn");
             }
         } else {
             showMessage("Elemento não reconhecido.", "error");
         }
+        
+        elementInput.value = ''; 
     }
 
     async function finishAndShowStats() {
@@ -156,10 +155,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (closeStatsPopupBtn && quizStatsPopup) {
         closeStatsPopupBtn.addEventListener('click', () => {
             quizStatsPopup.style.display = 'none';
+            
             foundElements = [];
             createGrid(elementosData, foundElements);
+            
             if (messageParagraph) messageParagraph.textContent = "";
-            if (elementInput) elementInput.value = "";
+            if (elementInput) {
+                elementInput.value = "";
+                elementInput.focus();
+            }
         });
     }
 });
