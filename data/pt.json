@@ -8,7 +8,8 @@
     "transition_metals": "Metais de transição",
     "post_transition_metals": "Metais pós-transição",
     "lanthanides": "Lantanídeos",
-    "actinides": "Actinídeos"
+    "actinides": "Actinídeos",
+    "theoretical": "Teóricos"
   },
   "elementos" : {
     "1": { "name": "Hidrogênio", "family_name": "N/A" },
