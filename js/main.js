@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!jaEncontrado) {
                 foundElements.push(elemento);
                 revealElement(elemento);
-                showMessage(`Boa! ${elemento.nome} encontrado.`, "success");
+                showMessage(`${elemento.nome} encontrado.`, "success");
             } else {
-                showMessage("Você já encontrou este elemento!", "warn");
+                showMessage("Elemento já encontrado", "warn");
             }
         } else {
             showMessage("Elemento não reconhecido.", "error");
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         if (saveQuizBtn) saveQuizBtn.disabled = true;
-        showMessage("Salvando tentativa no ranking global...", "warn");
+        showMessage("Salvando tentativa nas estatísticas...", "warn");
 
         try {
             const simbolosEncontrados = foundElements.map(el => el.simbolo);
