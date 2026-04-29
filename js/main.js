@@ -9,6 +9,7 @@ let foundElements = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
     const elementInput = document.getElementById('elementInput');
+    const elementForm = document.getElementById('elementForm');
     const familyFilterSelect = document.getElementById('familyFilterSelect');
     const saveQuizBtn = document.getElementById('saveQuizBtn'); 
     const quizStatsPopup = document.getElementById('quizStatsPopup');
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 fetch('data/key_words.json')
             ]);
 
-            if (!resEl.ok || !resTr.ok || !resKey.ok) throw new Error("Erro ao carregar arquivos de dados.");
+            if (!resEl.ok || !resTr.ok || !resKey.ok) throw new Error("Erro ao carregar arquivos.");
 
             elementosData = await resEl.json();
             traducoes = await resTr.json();
@@ -36,9 +37,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             populateFilter(elementosData, traducoes);
 
         } catch (error) {
-            console.error("Erro ao inicializar quiz:", error);
+            console.error("Erro ao inicializar:", error);
             if (messageParagraph) {
-                messageParagraph.textContent = "Erro ao carregar os dados dos elementos.";
+                messageParagraph.textContent = "Erro ao carregar dados.";
                 messageParagraph.classList.add('error-message');
             }
         }
@@ -68,22 +69,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             if (!jaEncontrado) {
                 foundElements.push(elementoEncontrado);
+                
                 const dadosTraduzidos = traducoes.elementos[idStr];
+                
                 revealElement(elementoEncontrado, dadosTraduzidos);
                 showMessage(`${dadosTraduzidos.name} encontrado!`, "success");
             } else {
                 showMessage("Elemento já encontrado.", "warn");
             }
         } else {
-            showMessage("Elemento não reconhecido.", "error");
+            showMessage("Não reconhecido.", "error");
         }
         
         elementInput.value = ''; 
+        elementInput.focus();
+    }
+
+    if (elementForm) {
+        elementForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleSubmission();
+        });
     }
 
     async function finishAndShowStats() {
         if (foundElements.length === 0) {
-            alert("Encontre pelo menos um elemento antes de finalizar!");
+            alert("Encontre elementos antes de finalizar!");
             return;
         }
 
@@ -109,18 +120,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     function renderStatsPopup(raridadeMap, totaltries) {
         if (!statsList || !quizStatsPopup) return;
 
-        const acertos = foundElements.length;
-        const total = elementosData.length;
-
-        let html = `
-            <div style="margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px;">
-                <h3 style="margin: 0; color: #0056b3;">Resultado da Rodada</h3>
-                <p>Você encontrou <strong>${acertos}</strong> de <strong>${total}</strong> elementos.</p>
-                <small>Baseado em ${totaltries} tentativas globais.</small>
-            </div>
-            <h4 style="text-align: left; margin-bottom: 10px;">Sua raridade global:</h4>
-            <ul style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;">
-        `;
+        let html = `<h4 style="text-align: left; margin-bottom: 10px;">Sua raridade global (${totaltries} tentativas):</h4>`;
+        html += `<ul style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;">`;
 
         const sortedElements = [...foundElements].sort((a, b) => {
             return (raridadeMap[a.id] || 0) - (raridadeMap[b.id] || 0);
@@ -155,12 +156,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         else if (type === "warn") messageParagraph.classList.add('found-element-tag');
     }
 
-    if (elementInput) {
-        elementInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSubmission();
-        });
-    }
-
     if (familyFilterSelect) {
         familyFilterSelect.addEventListener('change', () => {
             createGrid(elementosData, foundElements, traducoes);
@@ -169,16 +164,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (saveQuizBtn) saveQuizBtn.addEventListener('click', finishAndShowStats);
 
-    if (closeStatsPopupBtn && quizStatsPopup) {
+    if (closeStatsPopupBtn) {
         closeStatsPopupBtn.addEventListener('click', () => {
             quizStatsPopup.style.display = 'none';
             foundElements = [];
             createGrid(elementosData, foundElements, traducoes);
             if (messageParagraph) messageParagraph.textContent = "";
-            if (elementInput) {
-                elementInput.value = "";
-                elementInput.focus();
-            }
+            elementInput.focus();
         });
     }
 });
