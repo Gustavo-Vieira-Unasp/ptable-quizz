@@ -53,16 +53,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!jaEncontrado) {
                 foundElements.push(elemento);
                 revealElement(elemento);
-                
-                elementInput.value = '';
                 showMessage(`Boa! ${elemento.nome} encontrado.`, "success");
             } else {
-                elementInput.value = '';
                 showMessage("Você já encontrou este elemento!", "warn");
             }
         } else {
             showMessage("Elemento não reconhecido.", "error");
         }
+        
+        elementInput.value = ''; 
     }
 
     async function finishAndShowStats() {
