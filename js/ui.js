@@ -9,19 +9,21 @@ export function createGrid(elementos, found) {
 
         const card = document.createElement('div');
         card.className = 'empty-element-card';
-        card.id = `el-${el.simbolo}`;
+        card.setAttribute('data-pos', `${el.x}-${el.y}`);
         
         card.style.gridColumn = el.x;
         card.style.gridRow = el.y;
 
-        card.innerHTML = `
-            <span class="symbol-display">${el.simbolo}</span>
-            <span class="name-display">${el.nome}</span>
-        `;
-
         const jaEncontrado = found.some(f => f.simbolo === el.simbolo);
+        
         if (jaEncontrado) {
+            card.innerHTML = `
+                <span class="symbol-display">${el.simbolo}</span>
+                <span class="name-display">${el.nome}</span>
+            `;
             card.classList.add('element-revealed');
+        } else {
+            card.innerHTML = '';
         }
 
         grid.appendChild(card);
@@ -47,8 +49,13 @@ function renderTableExtras(grid) {
 }
 
 export function revealElement(el) {
-    const card = document.getElementById(`el-${el.simbolo}`);
+    const card = document.querySelector(`[data-pos="${el.x}-${el.y}"]`);
+    
     if (card) {
+        card.innerHTML = `
+            <span class="symbol-display">${el.simbolo}</span>
+            <span class="name-display">${el.nome}</span>
+        `;
         card.classList.add('element-revealed');
     }
 }
