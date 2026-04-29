@@ -12,13 +12,17 @@
         <h1>Quiz: Elementos da Tabela Periódica</h1>
         
         <section class="quiz-section">
-            <div class="search-area">
-                <input type="text" id="elementInput" placeholder="Digite nome ou símbolo" autocomplete="off">
+            <form id="elementForm" action="javascript:void(0);" autocomplete="off" class="search-area">
+                <input type="text" id="elementInput" placeholder="Digite nome ou símbolo" 
+                       enterkeyhint="go" autocapitalize="none" spellcheck="false" required>
+                
                 <select id="familyFilterSelect">
                     <option value="">Todas as Famílias</option>
                 </select>
-                <button id="saveQuizBtn">Finalizar Quiz</button>
-            </div>
+                
+                <button type="submit" style="display:none;">Verificar</button> <button type="button" id="saveQuizBtn">Finalizar Quiz</button>
+            </form>
+            
             <p id="message"></p>
             <div id="foundElementsList"></div>
         </section>
@@ -32,18 +36,20 @@
         <footer class="github-footer">
             <p>Tem um feedback? Abra uma Issue no <a href="https://github.com/Gustavo-Vieira-Unasp/ptable-quizz/issues" target="_blank">GitHub</a></p>
             <a class="github-button" 
-            href="https://github.com/Gustavo-Vieira-Unasp/ptable-quizz" 
-            data-icon="octicon-star" 
-            data-size="large" 
-            data-show-count="true" 
-            aria-label="Star Gustavo-Vieira-Unasp/ptable-quizz on GitHub">Star</a>
+               href="https://github.com/Gustavo-Vieira-Unasp/ptable-quizz" 
+               data-icon="octicon-star" 
+               data-size="large" 
+               data-show-count="true" 
+               aria-label="Star Gustavo-Vieira-Unasp/ptable-quizz on GitHub">Star</a>
         </footer>
     </div>
 
     <div id="quizStatsPopup" class="popup-overlay">
         <div class="popup-content">
-            <h2>Estatísticas da Tentativa</h2>
-            <ul id="statsList"></ul>
+            <div id="statsListContainer">
+                <h2>Estatísticas da Tentativa</h2>
+                <ul id="statsList" style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;"></ul>
+            </div>
             <button id="closeStatsPopupBtn" class="save-button">Fechar e Reiniciar</button>
         </div>
     </div>

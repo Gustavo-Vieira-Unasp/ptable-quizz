@@ -74,7 +74,7 @@ export function populateFilter(elementos, traducoes) {
     const familiasTraduzidas = familiaIds.map(id => {
         return {
             id: id,
-            nome: traducoes.familias ? (traducoes.familias[id] || id) : id
+            nome: (traducoes.familias && traducoes.familias[id]) ? traducoes.familias[id] : id
         };
     });
 
@@ -83,6 +83,7 @@ export function populateFilter(elementos, traducoes) {
     familiasTraduzidas.forEach(familia => {
         const option = document.createElement('option');
         option.value = familia.id;
+        
         const nomeFormatado = familia.nome.charAt(0).toUpperCase() + familia.nome.slice(1);
         option.textContent = nomeFormatado; 
         
