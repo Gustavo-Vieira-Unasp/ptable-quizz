@@ -1,29 +1,31 @@
-export function createGrid(elementos, found) {
+export function createGrid(elementos, found, traducoes) {
     const grid = document.getElementById('periodic-table-grid');
     if (!grid) return;
 
     grid.innerHTML = '';
 
     elementos.forEach(el => {
-        if (el.x === undefined || el.y === undefined) return;
+        if (el.position?.x === undefined || el.position?.y === undefined) return;
 
         const card = document.createElement('div');
         card.className = 'empty-element-card';
-        card.setAttribute('data-pos', `${el.x}-${el.y}`);
+        card.setAttribute('data-pos', `${el.position.x}-${el.position.y}`);
         
-        card.style.gridColumn = el.x;
-        card.style.gridRow = el.y;
+        card.style.gridColumn = el.position.x;
+        card.style.gridRow = el.position.y;
 
-        const jaEncontrado = found.some(f => f.simbolo === el.simbolo);
+        const idStr = el.id.toString();
+        const jaEncontrado = found.some(f => f.id === el.id);
         
         if (jaEncontrado) {
+            const nomeTraduzido = traducoes[idStr]?.name || "";
             card.innerHTML = `
-                <span class="symbol-display">${el.simbolo}</span>
-                <span class="name-display">${el.nome}</span>
+                <span class="symbol-display">${el.symbol}</span>
+                <span class="name-display">${nomeTraduzido}</span>
             `;
             card.classList.add('element-revealed');
         } else {
-            card.innerHTML = '';
+            card.innerHTML = `<span class="symbol-display">${el.symbol}</span>`;
         }
 
         grid.appendChild(card);
@@ -48,33 +50,40 @@ function renderTableExtras(grid) {
     grid.appendChild(actPlaceholder);
 }
 
-export function revealElement(el) {
-    const card = document.querySelector(`[data-pos="${el.x}-${el.y}"]`);
+export function revealElement(el, traducaoEl) {
+    const card = document.querySelector(`[data-pos="${el.position.x}-${el.position.y}"]`);
     
     if (card) {
         card.innerHTML = `
-            <span class="symbol-display">${el.simbolo}</span>
-            <span class="name-display">${el.nome}</span>
+            <span class="symbol-display">${el.symbol}</span>
+            <span class="name-display">${traducaoEl.name}</span>
         `;
         card.classList.add('element-revealed');
     }
 }
 
-export function populateFilter(elementos) {
+export function populateFilter(elementos, traducoes) {
     const select = document.getElementById('familyFilterSelect');
     if (!select) return;
 
     select.innerHTML = '<option value="">Todas as Famílias</option>';
 
-    const familias = [...new Set(elementos.map(e => e.familia))]
-        .filter(f => f && f !== "N/A" && f !== "");
+    const familiaIds = [...new Set(elementos.map(e => e.metadata.family_id))]
+        .filter(id => id && id !== "na" && id !== "");
 
-    familias.sort(); 
+    const familiasTraduzidas = familiaIds.map(id => {
+        return {
+            id: id,
+            nome: traducoes.familias ? traducoes.familias[id] : id
+        };
+    });
 
-    familias.forEach(familia => {
+    familiasTraduzidas.sort((a, b) => a.nome.localeCompare(b.nome)); 
+
+    familiasTraduzidas.forEach(familia => {
         const option = document.createElement('option');
-        option.value = familia;
-        option.textContent = familia;
+        option.value = familia.id;
+        option.textContent = familia.nome;
         select.appendChild(option);
     });
 }

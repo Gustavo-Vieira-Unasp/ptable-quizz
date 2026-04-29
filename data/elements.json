@@ -1,0 +1,1182 @@
+[
+    {
+        "id": 1,
+        "symbol": "H",
+        "position": { "x": 1, "y": 1 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "na",
+            "mass": 1.008
+        }
+    },
+    {
+        "id": 2,
+        "symbol": "He",
+        "position": { "x": 18, "y": 1 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 4.0026
+        }
+    },
+    {
+        "id": 3,
+        "symbol": "Li",
+        "position": { "x": 1, "y": 2 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 6.94
+        }
+    },
+    {
+        "id": 4,
+        "symbol": "Be",
+        "position": { "x": 2, "y": 2 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 9.012
+        }
+    },
+    {
+        "id": 5,
+        "symbol": "B",
+        "position": { "x": 13, "y": 2 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 10.81
+        }
+    },
+    {
+        "id": 6,
+        "symbol": "C",
+        "position": { "x": 14, "y": 2 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "non_metals",
+            "mass": 12.011
+        }
+    },
+    {
+        "id": 7,
+        "symbol": "N",
+        "position": { "x": 15, "y": 2 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "non_metals",
+            "mass": 14.007
+        }
+    },
+    {
+        "id": 8,
+        "symbol": "O",
+        "position": { "x": 16, "y": 2 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "non_metals",
+            "mass": 15.999
+        }
+    },
+    {
+        "id": 9,
+        "symbol": "F",
+        "position": { "x": 17, "y": 2 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "non_metals",
+            "mass": 18.998
+        }
+    },
+    {
+        "id": 10,
+        "symbol": "Ne",
+        "position": { "x": 18, "y": 2 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 20.18
+        }
+    },
+    {
+        "id": 11,
+        "symbol": "Na",
+        "position": { "x": 1, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 22.99
+        }
+    },
+    {
+        "id": 12,
+        "symbol": "Mg",
+        "position": { "x": 2, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 24.305
+        }
+    },
+    {
+        "id": 13,
+        "symbol": "Al",
+        "position": { "x": 13, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 26.982
+        }
+    },
+    {
+        "id": 14,
+        "symbol": "Si",
+        "position": { "x": 14, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 28.085
+        }
+    },
+    {
+        "id": 15,
+        "symbol": "P",
+        "position": { "x": 15, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "non_metals",
+            "mass": 30.974
+        }
+    },
+    {
+        "id": 16,
+        "symbol": "S",
+        "position": { "x": 16, "y": 3 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "non_metals",
+            "mass": 32.06
+        }
+    },
+    {
+        "id": 17,
+        "symbol": "Cl",
+        "position": { "x": 17, "y": 3 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "non_metals",
+            "mass": 35.45
+        }
+    },
+    {
+        "id": 18,
+        "symbol": "Ar",
+        "position": { "x": 18, "y": 3 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 39.948
+        }
+    },
+    {
+        "id": 19,
+        "symbol": "K",
+        "position": { "x": 1, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 39.098
+        }
+    },
+    {
+        "id": 20,
+        "symbol": "Ca",
+        "position": { "x": 2, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 40.078
+        }
+    },
+    {
+        "id": 21,
+        "symbol": "Sc",
+        "position": { "x": 3, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 44.956
+        }
+    },
+    {
+        "id": 22,
+        "symbol": "Ti",
+        "position": { "x": 4, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 47.867
+        }
+    },
+    {
+        "id": 23,
+        "symbol": "V",
+        "position": { "x": 5, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 50.942
+        }
+    },
+    {
+        "id": 24,
+        "symbol": "Cr",
+        "position": { "x": 6, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 51.996
+        }
+    },
+    {
+        "id": 25,
+        "symbol": "Mn",
+        "position": { "x": 7, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 54.938
+        }
+    },
+    {
+        "id": 26,
+        "symbol": "Fe",
+        "position": { "x": 8, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 55.845
+        }
+    },
+    {
+        "id": 27,
+        "symbol": "Co",
+        "position": { "x": 9, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 58.933
+        }
+    },
+    {
+        "id": 28,
+        "symbol": "Ni",
+        "position": { "x": 10, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 58.693
+        }
+    },
+    {
+        "id": 29,
+        "symbol": "Cu",
+        "position": { "x": 11, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 63.546
+        }
+    },
+    {
+        "id": 30,
+        "symbol": "Zn",
+        "position": { "x": 12, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 65.38
+        }
+    },
+    {
+        "id": 31,
+        "symbol": "Ga",
+        "position": { "x": 13, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 69.723
+        }
+    },
+    {
+        "id": 32,
+        "symbol": "Ge",
+        "position": { "x": 14, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 72.63
+        }
+    },
+    {
+        "id": 33,
+        "symbol": "As",
+        "position": { "x": 15, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 74.922
+        }
+    },
+    {
+        "id": 34,
+        "symbol": "Se",
+        "position": { "x": 16, "y": 4 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "non_metals",
+            "mass": 78.971
+        }
+    },
+    {
+        "id": 35,
+        "symbol": "Br",
+        "position": { "x": 17, "y": 4 },
+        "metadata": {
+            "state": "liquid",
+            "family_id": "non_metals",
+            "mass": 79.904
+        }
+    },
+    {
+        "id": 36,
+        "symbol": "Kr",
+        "position": { "x": 18, "y": 4 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 83.798
+        }
+    },
+    {
+        "id": 37,
+        "symbol": "Rb",
+        "position": { "x": 1, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 85.468
+        }
+    },
+    {
+        "id": 38,
+        "symbol": "Sr",
+        "position": { "x": 2, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 87.62
+        }
+    },
+    {
+        "id": 39,
+        "symbol": "Y",
+        "position": { "x": 3, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 88.906
+        }
+    },
+    {
+        "id": 40,
+        "symbol": "Zr",
+        "position": { "x": 4, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 91.224
+        }
+    },
+    {
+        "id": 41,
+        "symbol": "Nb",
+        "position": { "x": 5, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 92.906
+        }
+    },
+    {
+        "id": 42,
+        "symbol": "Mo",
+        "position": { "x": 6, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 95.95
+        }
+    },
+    {
+        "id": 43,
+        "symbol": "Tc",
+        "position": { "x": 7, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 98.0
+        }
+    },
+    {
+        "id": 44,
+        "symbol": "Ru",
+        "position": { "x": 8, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 101.07
+        }
+    },
+    {
+        "id": 45,
+        "symbol": "Rh",
+        "position": { "x": 9, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 102.91
+        }
+    },
+    {
+        "id": 46,
+        "symbol": "Pd",
+        "position": { "x": 10, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 106.42
+        }
+    },
+    {
+        "id": 47,
+        "symbol": "Ag",
+        "position": { "x": 11, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 107.87
+        }
+    },
+    {
+        "id": 48,
+        "symbol": "Cd",
+        "position": { "x": 12, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 112.41
+        }
+    },
+    {
+        "id": 49,
+        "symbol": "In",
+        "position": { "x": 13, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 114.82
+        }
+    },
+    {
+        "id": 50,
+        "symbol": "Sn",
+        "position": { "x": 14, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 118.71
+        }
+    },
+    {
+        "id": 51,
+        "symbol": "Sb",
+        "position": { "x": 15, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 121.76
+        }
+    },
+    {
+        "id": 52,
+        "symbol": "Te",
+        "position": { "x": 16, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 127.6
+        }
+    },
+    {
+        "id": 53,
+        "symbol": "I",
+        "position": { "x": 17, "y": 5 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "non_metals",
+            "mass": 126.9
+        }
+    },
+    {
+        "id": 54,
+        "symbol": "Xe",
+        "position": { "x": 18, "y": 5 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 131.29
+        }
+    },
+    {
+        "id": 55,
+        "symbol": "Cs",
+        "position": { "x": 1, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 132.91
+        }
+    },
+    {
+        "id": 56,
+        "symbol": "Ba",
+        "position": { "x": 2, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 137.33
+        }
+    },
+    {
+        "id": 57,
+        "symbol": "La",
+        "position": { "x": 3, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 138.91
+        }
+    },
+    {
+        "id": 58,
+        "symbol": "Ce",
+        "position": { "x": 4, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 140.12
+        }
+    },
+    {
+        "id": 59,
+        "symbol": "Pr",
+        "position": { "x": 5, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 140.91
+        }
+    },
+    {
+        "id": 60,
+        "symbol": "Nd",
+        "position": { "x": 6, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 144.24
+        }
+    },
+    {
+        "id": 61,
+        "symbol": "Pm",
+        "position": { "x": 7, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 145.0
+        }
+    },
+    {
+        "id": 62,
+        "symbol": "Sm",
+        "position": { "x": 8, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 150.36
+        }
+    },
+    {
+        "id": 63,
+        "symbol": "Eu",
+        "position": { "x": 9, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 151.96
+        }
+    },
+    {
+        "id": 64,
+        "symbol": "Gd",
+        "position": { "x": 10, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 157.25
+        }
+    },
+    {
+        "id": 65,
+        "symbol": "Tb",
+        "position": { "x": 11, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 158.93
+        }
+    },
+    {
+        "id": 66,
+        "symbol": "Dy",
+        "position": { "x": 12, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 162.5
+        }
+    },
+    {
+        "id": 67,
+        "symbol": "Ho",
+        "position": { "x": 13, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 164.93
+        }
+    },
+    {
+        "id": 68,
+        "symbol": "Er",
+        "position": { "x": 14, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 167.26
+        }
+    },
+    {
+        "id": 69,
+        "symbol": "Tm",
+        "position": { "x": 15, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 168.93
+        }
+    },
+    {
+        "id": 70,
+        "symbol": "Yb",
+        "position": { "x": 16, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 173.05
+        }
+    },
+    {
+        "id": 71,
+        "symbol": "Lu",
+        "position": { "x": 17, "y": 8 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "lanthanides",
+            "mass": 174.97
+        }
+    },
+    {
+        "id": 72,
+        "symbol": "Hf",
+        "position": { "x": 4, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 178.49
+        }
+    },
+    {
+        "id": 73,
+        "symbol": "Ta",
+        "position": { "x": 5, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 180.95
+        }
+    },
+    {
+        "id": 74,
+        "symbol": "W",
+        "position": { "x": 6, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 183.84
+        }
+    },
+    {
+        "id": 75,
+        "symbol": "Re",
+        "position": { "x": 7, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 186.21
+        }
+    },
+    {
+        "id": 76,
+        "symbol": "Os",
+        "position": { "x": 8, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 190.23
+        }
+    },
+    {
+        "id": 77,
+        "symbol": "Ir",
+        "position": { "x": 9, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 192.22
+        }
+    },
+    {
+        "id": 78,
+        "symbol": "Pt",
+        "position": { "x": 10, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 195.08
+        }
+    },
+    {
+        "id": 79,
+        "symbol": "Au",
+        "position": { "x": 11, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "transition_metals",
+            "mass": 196.97
+        }
+    },
+    {
+        "id": 80,
+        "symbol": "Hg",
+        "position": { "x": 12, "y": 6 },
+        "metadata": {
+            "state": "liquid",
+            "family_id": "transition_metals",
+            "mass": 200.59
+        }
+    },
+    {
+        "id": 81,
+        "symbol": "Tl",
+        "position": { "x": 13, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 204.38
+        }
+    },
+    {
+        "id": 82,
+        "symbol": "Pb",
+        "position": { "x": 14, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 207.2
+        }
+    },
+    {
+        "id": 83,
+        "symbol": "Bi",
+        "position": { "x": 15, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 208.98
+        }
+    },
+    {
+        "id": 84,
+        "symbol": "Po",
+        "position": { "x": 16, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "post_transition_metals",
+            "mass": 209.0
+        }
+    },
+    {
+        "id": 85,
+        "symbol": "At",
+        "position": { "x": 17, "y": 6 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "metalloids",
+            "mass": 210.0
+        }
+    },
+    {
+        "id": 86,
+        "symbol": "Rn",
+        "position": { "x": 18, "y": 6 },
+        "metadata": {
+            "state": "gas",
+            "family_id": "noble_gases",
+            "mass": 222.0
+        }
+    },
+    {
+        "id": 87,
+        "symbol": "Fr",
+        "position": { "x": 1, "y": 7 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkali_metals",
+            "mass": 223.0
+        }
+    },
+    {
+        "id": 88,
+        "symbol": "Ra",
+        "position": { "x": 2, "y": 7 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "alkaline_earth_metals",
+            "mass": 226.0
+        }
+    },
+    {
+        "id": 89,
+        "symbol": "Ac",
+        "position": { "x": 3, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 227.0
+        }
+    },
+    {
+        "id": 90,
+        "symbol": "Th",
+        "position": { "x": 4, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 232.04
+        }
+    },
+    {
+        "id": 91,
+        "symbol": "Pa",
+        "position": { "x": 5, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 231.04
+        }
+    },
+    {
+        "id": 92,
+        "symbol": "U",
+        "position": { "x": 6, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 238.03
+        }
+    },
+    {
+        "id": 93,
+        "symbol": "Np",
+        "position": { "x": 7, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 237.0
+        }
+    },
+    {
+        "id": 94,
+        "symbol": "Pu",
+        "position": { "x": 8, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 244.0
+        }
+    },
+    {
+        "id": 95,
+        "symbol": "Am",
+        "position": { "x": 9, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 243.0
+        }
+    },
+    {
+        "id": 96,
+        "symbol": "Cm",
+        "position": { "x": 10, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 247.0
+        }
+    },
+    {
+        "id": 97,
+        "symbol": "Bk",
+        "position": { "x": 11, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 247.0
+        }
+    },
+    {
+        "id": 98,
+        "symbol": "Cf",
+        "position": { "x": 12, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 251.0
+        }
+    },
+    {
+        "id": 99,
+        "symbol": "Es",
+        "position": { "x": 13, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 252.0
+        }
+    },
+    {
+        "id": 100,
+        "symbol": "Fm",
+        "position": { "x": 14, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 257.0
+        }
+    },
+    {
+        "id": 101,
+        "symbol": "Md",
+        "position": { "x": 15, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 258.0
+        }
+    },
+    {
+        "id": 102,
+        "symbol": "No",
+        "position": { "x": 16, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 259.0
+        }
+    },
+    {
+        "id": 103,
+        "symbol": "Lr",
+        "position": { "x": 17, "y": 9 },
+        "metadata": {
+            "state": "solid",
+            "family_id": "actinides",
+            "mass": 266.0
+        }
+    },
+    {
+        "id": 104,
+        "symbol": "Rf",
+        "position": { "x": 4, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 267.0
+        }
+    },
+    {
+        "id": 105,
+        "symbol": "Db",
+        "position": { "x": 5, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 268.0
+        }
+    },
+    {
+        "id": 106,
+        "symbol": "Sg",
+        "position": { "x": 6, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 269.0
+        }
+    },
+    {
+        "id": 107,
+        "symbol": "Bh",
+        "position": { "x": 7, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 270.0
+        }
+    },
+    {
+        "id": 108,
+        "symbol": "Hs",
+        "position": { "x": 8, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 277.0
+        }
+    },
+    {
+        "id": 109,
+        "symbol": "Mt",
+        "position": { "x": 9, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 278.0
+        }
+    },
+    {
+        "id": 110,
+        "symbol": "Ds",
+        "position": { "x": 10, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 281.0
+        }
+    },
+    {
+        "id": 111,
+        "symbol": "Rg",
+        "position": { "x": 11, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 282.0
+        }
+    },
+    {
+        "id": 112,
+        "symbol": "Cn",
+        "position": { "x": 12, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "transition_metals",
+            "mass": 285.0
+        }
+    },
+    {
+        "id": 113,
+        "symbol": "Nh",
+        "position": { "x": 13, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 286.0
+        }
+    },
+    {
+        "id": 114,
+        "symbol": "Fl",
+        "position": { "x": 14, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 289.0
+        }
+    },
+    {
+        "id": 115,
+        "symbol": "Mc",
+        "position": { "x": 15, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 290.0
+        }
+    },
+    {
+        "id": 116,
+        "symbol": "Lv",
+        "position": { "x": 16, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 293.0
+        }
+    },
+    {
+        "id": 117,
+        "symbol": "Ts",
+        "position": { "x": 17, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 294.0
+        }
+    },
+    {
+        "id": 118,
+        "symbol": "Og",
+        "position": { "x": 18, "y": 7 },
+        "metadata": {
+            "state": "unknown",
+            "family_id": "theoretical",
+            "mass": 294.0
+        }
+    }
+]

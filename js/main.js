@@ -3,6 +3,8 @@ import { createGrid, revealElement, populateFilter } from './ui.js';
 import { saveAttempt, getGlobalRarity } from './database.js';
 
 let elementosData = [];
+let traducoes = {};
+let palavrasChave = {};
 let foundElements = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,48 +16,62 @@ document.addEventListener('DOMContentLoaded', async () => {
     const closeStatsPopupBtn = document.getElementById('closeStatsPopupBtn');
     const messageParagraph = document.getElementById('message');
 
-    try {
-        const response = await fetch('data/elementos.json');
-        if (!response.ok) throw new Error("Erro ao carregar o arquivo JSON");
-        elementosData = await response.json();
+    async function inicializarQuiz() {
+        try {
+            const [resEl, resTr, resKey] = await Promise.all([
+                fetch('data/elements.json'),
+                fetch('data/pt.json'),
+                fetch('data/key_words.json')
+            ]);
 
-        foundElements = []; 
+            if (!resEl.ok || !resTr.ok || !resKey.ok) throw new Error("Erro ao carregar arquivos de dados.");
 
-        createGrid(elementosData, foundElements);
-        populateFilter(elementosData);
+            elementosData = await resEl.json();
+            traducoes = await resTr.json();
+            palavrasChave = await resKey.json();
 
-    } catch (error) {
-        console.error("Erro ao inicializar quiz:", error);
-        if (messageParagraph) {
-            messageParagraph.textContent = "Erro ao carregar os dados dos elementos.";
-            messageParagraph.classList.add('error-message');
+            foundElements = []; 
+
+            createGrid(elementosData, foundElements, traducoes);
+            populateFilter(elementosData, traducoes);
+
+        } catch (error) {
+            console.error("Erro ao inicializar quiz:", error);
+            if (messageParagraph) {
+                messageParagraph.textContent = "Erro ao carregar os dados dos elementos.";
+                messageParagraph.classList.add('error-message');
+            }
         }
     }
 
+    await inicializarQuiz();
+
     function handleSubmission() {
         if (!elementInput) return;
-        const normalizedInput = normalizeString(elementInput.value);
+        const inputRaw = elementInput.value.trim();
+        const normalizedInput = normalizeString(inputRaw);
 
         if (!normalizedInput) return;
 
-        const elemento = elementosData.find(e => {
-            const matchesNome = normalizeString(e.nome) === normalizedInput;
-            const matchesSimbolo = normalizeString(e.simbolo) === normalizedInput;
-            const matchesKeywords = e.palavras_chave && e.palavras_chave.some(keyword => 
-                normalizeString(keyword) === normalizedInput
-            );
-            return matchesNome || matchesSimbolo || matchesKeywords;
-        });
+        let elementoEncontrado = null;
 
-        if (elemento) {
-            const jaEncontrado = foundElements.some(e => e.simbolo === elemento.simbolo);
+        for (const [id, lista] of Object.entries(palavrasChave)) {
+            if (lista.some(keyword => normalizeString(keyword) === normalizedInput)) {
+                elementoEncontrado = elementosData.find(e => e.id == id);
+                break;
+            }
+        }
+
+        if (elementoEncontrado) {
+            const idStr = elementoEncontrado.id.toString();
+            const jaEncontrado = foundElements.some(e => e.id === elementoEncontrado.id);
             
             if (!jaEncontrado) {
-                foundElements.push(elemento);
-                revealElement(elemento);
-                showMessage(`${elemento.nome} encontrado.`, "success");
+                foundElements.push(elementoEncontrado);
+                revealElement(elementoEncontrado, traducoes[idStr]);
+                showMessage(`${traducoes[idStr].name} encontrado!`, "success");
             } else {
-                showMessage("Elemento já encontrado", "warn");
+                showMessage("Elemento já encontrado.", "warn");
             }
         } else {
             showMessage("Elemento não reconhecido.", "error");
@@ -71,19 +87,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         if (saveQuizBtn) saveQuizBtn.disabled = true;
-        showMessage("Salvando tentativa nas estatísticas...", "warn");
+        showMessage("Salvando tentativa...", "warn");
 
         try {
-            const simbolosEncontrados = foundElements.map(el => el.simbolo);
-            await saveAttempt(simbolosEncontrados);
+            const idsEncontrados = foundElements.map(el => el.id);
+            await saveAttempt(idsEncontrados);
 
             const { raridadeMap, totaltries } = await getGlobalRarity();
 
             renderStatsPopup(raridadeMap, totaltries);
 
         } catch (error) {
-            console.error("Erro ao processar estatísticas globais:", error);
-            alert("Erro ao conectar com o banco de dados. Verifique sua conexão.");
+            console.error("Erro nas estatísticas:", error);
+            alert("Erro ao conectar com o banco de dados.");
         } finally {
             if (saveQuizBtn) saveQuizBtn.disabled = false;
         }
@@ -101,21 +117,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Você encontrou <strong>${acertos}</strong> de <strong>${total}</strong> elementos.</p>
                 <small>Baseado em ${totaltries} tentativas globais.</small>
             </div>
-            <h4 style="text-align: left; margin-bottom: 10px;">Raridade dos seus acertos:</h4>
+            <h4 style="text-align: left; margin-bottom: 10px;">Sua raridade (quão comum outros usuários acharam):</h4>
             <ul style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;">
         `;
 
         const sortedElements = [...foundElements].sort((a, b) => {
-            return (raridadeMap[a.simbolo] || 0) - (raridadeMap[b.simbolo] || 0);
+            return (raridadeMap[a.id] || 0) - (raridadeMap[b.id] || 0);
         });
 
         sortedElements.forEach(el => {
-            const freq = raridadeMap[el.simbolo] || 0;
+            const idStr = el.id.toString();
+            const freq = raridadeMap[el.id] || 0;
+            const nomeTraduzido = traducoes[idStr]?.name || "Desconhecido";
+
             html += `
                 <li style="padding: 8px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">
-                    <span><strong>${el.simbolo}</strong> (${el.nome})</span>
-                    <span style="color: ${freq < 20 ? '#d9534f' : '#5cb85c'}; font-weight: bold;">
-                        ${freq}% popular
+                    <span><strong>${el.symbol}</strong> (${nomeTraduzido})</span>
+                    <span style="color: ${freq < 30 ? '#d9534f' : '#5cb85c'}; font-weight: bold;">
+                        ${freq}% dos usuários
                     </span>
                 </li>
             `;
@@ -130,7 +149,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!messageParagraph) return;
         messageParagraph.textContent = text;
         messageParagraph.className = '';
-        
         if (type === "success") messageParagraph.classList.add('success-message');
         else if (type === "error") messageParagraph.classList.add('error-message');
         else if (type === "warn") messageParagraph.classList.add('found-element-tag');
@@ -144,21 +162,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (familyFilterSelect) {
         familyFilterSelect.addEventListener('change', () => {
-            createGrid(elementosData, foundElements);
+            createGrid(elementosData, foundElements, traducoes);
         });
     }
 
-    if (saveQuizBtn) {
-        saveQuizBtn.addEventListener('click', finishAndShowStats);
-    }
+    if (saveQuizBtn) saveQuizBtn.addEventListener('click', finishAndShowStats);
 
     if (closeStatsPopupBtn && quizStatsPopup) {
         closeStatsPopupBtn.addEventListener('click', () => {
             quizStatsPopup.style.display = 'none';
-            
             foundElements = [];
-            createGrid(elementosData, foundElements);
-            
+            createGrid(elementosData, foundElements, traducoes);
             if (messageParagraph) messageParagraph.textContent = "";
             if (elementInput) {
                 elementInput.value = "";

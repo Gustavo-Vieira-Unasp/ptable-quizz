@@ -30,24 +30,20 @@ export async function getGlobalRarity() {
     }
 
     const totaltries = data.length || 0;
-
-    if (totaltries === 0) {
-        return { raridadeMap: {}, totaltries: 0 };
-    }
+    if (totaltries === 0) return { raridadeMap: {}, totaltries: 0 };
 
     const contagem = {};
-
     data.forEach(row => {
-        const simbolos = row.elementos_ids.split(',');
-        const unicosNaPartida = [...new Set(simbolos)];
-        unicosNaPartida.forEach(s => {
-            if (s) contagem[s] = (contagem[s] || 0) + 1;
+        const ids = row.elementos_ids.split(',');
+        const unicosNaPartida = [...new Set(ids)];
+        unicosNaPartida.forEach(id => {
+            if (id) contagem[id] = (contagem[id] || 0) + 1;
         });
     });
 
     const raridadeMap = {};
-    for (const simbolo in contagem) {
-        raridadeMap[simbolo] = ((contagem[simbolo] / totaltries) * 100).toFixed(1);
+    for (const id in contagem) {
+        raridadeMap[id] = ((contagem[id] / totaltries) * 100).toFixed(1);
     }
 
     return { raridadeMap, totaltries };
