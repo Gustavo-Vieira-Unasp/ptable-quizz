@@ -18,7 +18,7 @@ export function createGrid(elementos, found, traducoes) {
         const jaEncontrado = found.some(f => f.id === el.id);
         
         if (jaEncontrado) {
-            const nomeTraduzido = traducoes[idStr]?.name || "";
+            const nomeTraduzido = traducoes.elementos?.[idStr]?.name || "";
             card.innerHTML = `
                 <span class="symbol-display">${el.symbol}</span>
                 <span class="name-display">${nomeTraduzido}</span>
@@ -74,7 +74,7 @@ export function populateFilter(elementos, traducoes) {
     const familiasTraduzidas = familiaIds.map(id => {
         return {
             id: id,
-            nome: traducoes.familias ? traducoes.familias[id] : id
+            nome: traducoes.familias ? (traducoes.familias[id] || id) : id
         };
     });
 
@@ -83,7 +83,9 @@ export function populateFilter(elementos, traducoes) {
     familiasTraduzidas.forEach(familia => {
         const option = document.createElement('option');
         option.value = familia.id;
-        option.textContent = familia.nome;
+        const nomeFormatado = familia.nome.charAt(0).toUpperCase() + familia.nome.slice(1);
+        option.textContent = nomeFormatado; 
+        
         select.appendChild(option);
     });
 }

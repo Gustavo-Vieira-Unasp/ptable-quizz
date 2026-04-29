@@ -68,8 +68,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             if (!jaEncontrado) {
                 foundElements.push(elementoEncontrado);
-                revealElement(elementoEncontrado, traducoes[idStr]);
-                showMessage(`${traducoes[idStr].name} encontrado!`, "success");
+                const dadosTraduzidos = traducoes.elementos[idStr];
+                revealElement(elementoEncontrado, dadosTraduzidos);
+                showMessage(`${dadosTraduzidos.name} encontrado!`, "success");
             } else {
                 showMessage("Elemento já encontrado.", "warn");
             }
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Você encontrou <strong>${acertos}</strong> de <strong>${total}</strong> elementos.</p>
                 <small>Baseado em ${totaltries} tentativas globais.</small>
             </div>
-            <h4 style="text-align: left; margin-bottom: 10px;">Sua raridade (quão comum outros usuários acharam):</h4>
+            <h4 style="text-align: left; margin-bottom: 10px;">Sua raridade global:</h4>
             <ul style="list-style: none; padding: 0; text-align: left; max-height: 300px; overflow-y: auto;">
         `;
 
@@ -128,7 +129,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         sortedElements.forEach(el => {
             const idStr = el.id.toString();
             const freq = raridadeMap[el.id] || 0;
-            const nomeTraduzido = traducoes[idStr]?.name || "Desconhecido";
+            const nomeTraduzido = traducoes.elementos[idStr]?.name || "Desconhecido";
 
             html += `
                 <li style="padding: 8px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between;">

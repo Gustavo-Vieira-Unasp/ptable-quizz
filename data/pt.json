@@ -1,4 +1,16 @@
 {
+  "familias": {
+    "non_metals": "Não-metais",
+    "noble_gases": "Gases nobres",
+    "alkali_metals": "Metais alcalinos",
+    "alkaline_earth_metals": "Metais alcalinoterrosos",
+    "metalloids": "Semimetais",
+    "transition_metals": "Metais de transição",
+    "post_transition_metals": "Metais pós-transição",
+    "lanthanides": "Lantanídeos",
+    "actinides": "Actinídeos"
+  },
+  "elementos" : {
     "1": { "name": "Hidrogênio", "family_name": "N/A" },
     "2": { "name": "Hélio", "family_name": "Gases Nobres" },
     "3": { "name": "Lítio", "family_name": "Metais Alcalinos" },
@@ -117,4 +129,5 @@
     "116": { "name": "Livermório", "family_name": "Elementos Teóricos" },
     "117": { "name": "Tenesso", "family_name": "Elementos Teóricos" },
     "118": { "name": "Oganessônio", "family_name": "Elementos Teóricos" }
+    }
 }
