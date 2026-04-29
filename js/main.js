@@ -156,10 +156,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (closeStatsPopupBtn && quizStatsPopup) {
         closeStatsPopupBtn.addEventListener('click', () => {
             quizStatsPopup.style.display = 'none';
+            
             foundElements = [];
             createGrid(elementosData, foundElements);
+            
             if (messageParagraph) messageParagraph.textContent = "";
-            if (elementInput) elementInput.value = "";
+            if (elementInput) {
+                elementInput.value = "";
+                elementInput.focus();
+            }
         });
     }
 });
